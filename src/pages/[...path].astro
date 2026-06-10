@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPost from '../layouts/BlogPost.astro';
+import { getCollection } from 'astro:content';
+
+const LOCALES = ['en', 'cs', 'es', 'de', 'pt'] as const;
+
+export async function getStaticPaths() {
+	const ALL_CATEGORIES = ['AI', 'PostgreSQL'];
+	const posts = await getCollection('blog', ({ data }) => data.locale === 'en' && !data.draft);
+	const pages: { params: { path?: string }; props: Record<string, unknown> }[] = [];
+
+	for (const category of ALL_CATEGORIES) {
+		pages.push({ params: { path: category }, props: { pageType: 'category', category, locale: 'en' } });
+	}
+
+	for (const post of posts) {
+		const slug = post.id.split('/').pop();
+		pages.push({ params: { path: slug }, props: { pageType: 'post', slug: post.id, locale: 'en' } });
+	}
+
+	return pages;
+}
+
+const { path } = Astro.params;
+const { pageType, slug, category } = Astro.props;
+
+const allPosts = await getCollection('blog', ({ data }) => data.locale === 'en' && !data.draft);
+allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+function localePath(l: string, cat?: string): string {
+	if (l === 'en') return cat ? `/${cat}` : '/';
+	return cat ? `/${l}/${cat}` : `/${l}`;
+}
+
+const langPaths: Record<string, string> = { en: '/', cs: '/cs', es: '/es', de: '/de', pt: '/pt' };
+
+let currentPost: (typeof allPosts)[number] | undefined;
+
+if (pageType === 'category') {
+	langPaths.en = localePath('en', category as string);
+	for (const l of LOCALES) if (l !== 'en') langPaths[l] = localePath(l, category as string);
+} else if (pageType === 'post') {
+	currentPost = allPosts.find(p => p.id === slug);
+	if (currentPost) {
+		langPaths.en = `/${currentPost.id.split('/').pop()}`;
+		if (currentPost.data.translation_id) {
+			const translations = await getCollection('blog', ({ data }) =>
+				data.translation_id === currentPost!.data.translation_id);
+			for (const l of LOCALES) {
+				if (l === 'en') continue;
+				const t = translations.find(e => e.data.locale === l);
+				langPaths[l] = t ? `/${l}/${t.id.split('/').pop()}` : localePath(l);
+			}
+		}
+	}
+}
+
+const langProps = { enPath: langPaths.en, csPath: langPaths.cs, esPath: langPaths.es, dePath: langPaths.de, ptPath: langPaths.pt };
+---
+
+{pageType === 'post' && currentPost && (
+	<BaseLayout title={currentPost.data.title} description={currentPost.data.description} locale="en" {...langProps}>
+		<BlogPost post={currentPost} />
+	</BaseLayout>
+)}
+
+{pageType === 'category' && (
+	<BaseLayout title={`Category: ${category}`} description={`Posts about ${category}`} locale="en" {...langProps}>
+		<h1>Category: {category}</h1>
+		<ul>
+			{allPosts.filter(p => p.data.categories.includes(category as string)).map(p => (
+				<li>
+					<a href={`/${p.id.split('/').pop()}`}>{p.data.title}</a>
+					<small> &mdash; {p.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</small>
+					<p>{p.data.description}</p>
+				</li>
+			))}
+		</ul>
+	</BaseLayout>
+)}

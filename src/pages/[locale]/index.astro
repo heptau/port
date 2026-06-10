@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+	const locales = ['cs', 'es', 'de', 'pt'];
+	return locales.map(locale => ({ params: { locale }, props: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: string };
+
+const posts = await getCollection('blog', ({ data }) => data.locale === locale && !data.draft);
+posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const labels: Record<string, { home: string; blog: string; latest: string; desc: string }> = {
+	cs: { home: 'Domů', blog: 'Blog', latest: 'Nejnovější příspěvky', desc: 'Blog Zbyňka Vanžury s praktickými postřehy z více než 20 let zkušeností — především o PostgreSQL, vývoji softwaru a AI, ale občas i o dalších tématech, která stojí za zamyšlení.' },
+	es: { home: 'Inicio', blog: 'Blog', latest: 'Últimos artículos', desc: 'El blog de Zbyněk Vanžura — ideas prácticas de más de 20 años de experiencia, principalmente sobre PostgreSQL, desarrollo de software e IA, pero también de vez en cuando sobre otros temas que merecen reflexión.' },
+	de: { home: 'Start', blog: 'Blog', latest: 'Neueste Beiträge', desc: 'Zbyněk Vanžuras Blog — praktische Einblicke aus mehr als 20 Jahren Erfahrung, hauptsächlich über PostgreSQL, Softwareentwicklung und KI, aber gelegentlich auch über andere Themen, die zum Nachdenken anregen.' },
+	pt: { home: 'Início', blog: 'Blog', latest: 'Artigos recentes', desc: 'O blog de Zbyněk Vanžura — insights práticos de mais de 20 anos de experiência, principalmente sobre PostgreSQL, desenvolvimento de software e IA, mas ocasionalmente também sobre outros temas que merecem reflexão.' },
+};
+
+const t = labels[locale] ?? labels.cs;
+---
+
+<BaseLayout title="port.80.cz" description={t.desc} locale={locale}>
+	<h1>port.80.cz</h1>
+	<p>{t.desc}</p>
+	<h2>{t.latest}</h2>
+	<ul>
+		{posts.slice(0, 5).map(post => (
+			<li>
+				<a href={`/${locale}/${post.id.split('/').pop()}`}>{post.data.title}</a>
+				<small>{post.data.date.toLocaleDateString(locale === 'cs' ? 'cs-CZ' : locale === 'es' ? 'es-ES' : locale === 'de' ? 'de-DE' : 'pt-PT', { year: 'numeric', month: 'long', day: 'numeric' })}</small>
+				<p>{post.data.description}</p>
+			</li>
+		))}
+	</ul>
+</BaseLayout>

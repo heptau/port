@@ -1,0 +1,152 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+	title: string;
+	description?: string;
+	locale?: string;
+	enPath?: string;
+	csPath?: string;
+	esPath?: string;
+	dePath?: string;
+	ptPath?: string;
+}
+
+const { title, description, locale = 'en', enPath, csPath, esPath, dePath, ptPath } = Astro.props;
+
+const allLocales = ['en', 'cs', 'es', 'de', 'pt'] as const;
+const langPaths: Record<string, string | undefined> = { en: enPath, cs: csPath, es: esPath, de: dePath, pt: ptPath };
+
+const FLAGS: Record<string, string> = { en: '🇬🇧', cs: '🇨🇿', es: '🇪🇸', de: '🇩🇪', pt: '🇵🇹' };
+const LANG_LABELS: Record<string, string> = { en: 'English', cs: 'Čeština', es: 'Español', de: 'Deutsch', pt: 'Português' };
+const THEME_LABELS: Record<string, string> = { auto: '🖥️ Auto', light: '☀️ Light', dark: '🌙 Dark' };
+---
+
+<!doctype html>
+<html lang={locale}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description ?? title} />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<title>{title}</title>
+		<script is:inline>
+			(function() {
+				var t = localStorage.getItem('port_theme');
+				if (t === 'light') { document.documentElement.setAttribute('data-theme', 'light'); }
+				else if (t === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
+				else if (window.matchMedia('(prefers-color-scheme: light)').matches) { document.documentElement.setAttribute('data-theme', 'light'); }
+			})();
+		</script>
+	</head>
+	<body>
+		<header>
+			<nav aria-label="Main">
+				<a class="nav-icon home-icon" href={locale === 'en' ? '/' : `/${locale}`} aria-label="Home">
+					<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+						<polyline points="9 22 9 12 15 12 15 22"/>
+					</svg>
+				</a>
+				<div class="cat-dropdown">
+					<button class="cat-trigger" aria-label="Categories" aria-haspopup="true" aria-expanded="false">
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<rect x="3" y="3" width="7" height="7"/>
+							<rect x="14" y="3" width="7" height="7"/>
+							<rect x="3" y="14" width="7" height="7"/>
+							<rect x="14" y="14" width="7" height="7"/>
+						</svg>
+					</button>
+					<div class="dropdown-menu cat-menu">
+						<a class="dropdown-option" href={locale === 'en' ? '/PostgreSQL' : `/${locale}/PostgreSQL`}>PostgreSQL</a>
+						<a class="dropdown-option" href={locale === 'en' ? '/AI' : `/${locale}/AI`}>AI</a>
+					</div>
+				</div>
+				<div class="nav-spacer"></div>
+				<div class="theme-dropdown">
+					<button class="theme-trigger" aria-label="Change theme" aria-haspopup="true" aria-expanded="false">
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+							<path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18V4c4.42 0 8 3.58 8 8s-3.58 8-8 8z"/>
+						</svg>
+					</button>
+					<div class="dropdown-menu theme-menu">
+						<button class="dropdown-option theme-option" data-theme="auto">{THEME_LABELS.auto}</button>
+						<button class="dropdown-option theme-option" data-theme="light">{THEME_LABELS.light}</button>
+						<button class="dropdown-option theme-option" data-theme="dark">{THEME_LABELS.dark}</button>
+					</div>
+				</div>
+				<div class="lang-dropdown">
+					<button class="lang-trigger" aria-label="Change language" aria-haspopup="true" aria-expanded="false">
+						<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="12" cy="12" r="10"/>
+							<line x1="2" y1="12" x2="22" y2="12"/>
+							<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+						</svg>
+					</button>
+					<div class="dropdown-menu lang-menu">
+						{allLocales.map(l => (
+							<a class="dropdown-option lang-option" href={langPaths[l] ?? (l === 'en' ? '/' : `/${l}`)}>
+								{FLAGS[l]} {LANG_LABELS[l]}
+							</a>
+						))}
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<slot />
+		</main>
+		<script>
+			const themeDropdown = document.querySelector('.theme-dropdown');
+			const themeTrigger = document.querySelector('.theme-trigger');
+			const themeOptions = document.querySelectorAll('.theme-option');
+			const langDropdown = document.querySelector('.lang-dropdown');
+			const langTrigger = document.querySelector('.lang-trigger');
+			const catDropdown = document.querySelector('.cat-dropdown');
+			const catTrigger = document.querySelector('.cat-trigger');
+
+			const ALL_DROPDOWNS = '.lang-dropdown, .theme-dropdown, .cat-dropdown';
+
+			function applyTheme(theme) {
+				if (theme === 'auto') {
+					document.documentElement.removeAttribute('data-theme');
+				} else {
+					document.documentElement.setAttribute('data-theme', theme);
+				}
+				localStorage.setItem('port_theme', theme);
+				themeOptions.forEach(function(opt) {
+					opt.classList.toggle('active', opt.getAttribute('data-theme') === theme);
+				});
+				if (themeDropdown) themeDropdown.classList.remove('open');
+			}
+
+			function setupDropdown(trigger, dropdown) {
+				if (!trigger || !dropdown) return;
+				trigger.addEventListener('click', function(e) {
+					e.stopPropagation();
+					var wasOpen = dropdown.classList.contains('open');
+					document.querySelectorAll(ALL_DROPDOWNS).forEach(function(d) { d.classList.remove('open'); });
+					if (!wasOpen) dropdown.classList.add('open');
+					trigger.setAttribute('aria-expanded', !wasOpen);
+				});
+			}
+
+			var stored = localStorage.getItem('port_theme') || 'auto';
+			applyTheme(stored);
+
+			setupDropdown(themeTrigger, themeDropdown);
+			setupDropdown(langTrigger, langDropdown);
+			setupDropdown(catTrigger, catDropdown);
+
+			themeOptions.forEach(function(opt) {
+				opt.addEventListener('click', function() {
+					applyTheme(opt.getAttribute('data-theme'));
+				});
+			});
+
+			document.addEventListener('click', function() {
+				document.querySelectorAll(ALL_DROPDOWNS).forEach(function(d) { d.classList.remove('open'); });
+			});
+		</script>
+	</body>
+</html>
