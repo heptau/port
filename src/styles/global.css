@@ -217,6 +217,11 @@ body > header nav a.home-icon:hover {
 	min-width: 170px;
 }
 
+.cat-menu {
+	left: 0;
+	right: auto;
+}
+
 .cat-dropdown.open .cat-menu,
 .lang-dropdown.open .lang-menu,
 .theme-dropdown.open .theme-menu {
