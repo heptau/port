@@ -1,10 +1,12 @@
 ---
 import '../styles/global.css';
+import Search from '../components/Search.astro';
 
 export interface Props {
 	title: string;
 	description?: string;
 	locale?: string;
+	canonical?: string;
 	enPath?: string;
 	csPath?: string;
 	esPath?: string;
@@ -12,7 +14,7 @@ export interface Props {
 	ptPath?: string;
 }
 
-const { title, description, locale = 'en', enPath, csPath, esPath, dePath, ptPath } = Astro.props;
+const { title, description, locale = 'en', canonical, enPath, csPath, esPath, dePath, ptPath } = Astro.props;
 
 const allLocales = ['en', 'cs', 'es', 'de', 'pt'] as const;
 const langPaths: Record<string, string | undefined> = { en: enPath, cs: csPath, es: esPath, de: dePath, pt: ptPath };
@@ -42,6 +44,7 @@ const tt = NAV_TOOLTIPS[locale] ?? NAV_TOOLTIPS.en;
 		<meta property="og:description" content={description ?? title} />
 		<meta property="og:image" content="https://port.80.cz/favicon.png" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
+		{canonical && <link rel="canonical" href={canonical} />}
 		<title>{title}</title>
 		<script is:inline>
 			(function() {
@@ -96,6 +99,8 @@ const tt = NAV_TOOLTIPS[locale] ?? NAV_TOOLTIPS.en;
 						<a class="dropdown-option" href={locale === 'en' ? '/AI' : `/${locale}/AI`}>AI</a>
 					</div>
 				</div>
+				<div class="nav-spacer"></div>
+				<Search locale={locale} />
 				<div class="nav-spacer"></div>
 				<div class="theme-dropdown">
 					<button class="theme-trigger" aria-label={tt.theme} title={tt.theme} aria-haspopup="true" aria-expanded="false">

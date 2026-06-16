@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../layouts/BlogPost.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PrevNext from '../components/PrevNext.astro';
+import PostList from '../components/PostList.astro';
 import { getCollection } from 'astro:content';
 
 const LOCALES = ['en', 'cs', 'es', 'de', 'pt'] as const;
@@ -57,25 +60,21 @@ if (pageType === 'category') {
 }
 
 const langProps = { enPath: langPaths.en, csPath: langPaths.cs, esPath: langPaths.es, dePath: langPaths.de, ptPath: langPaths.pt };
+const canonical = pageType === 'post' && currentPost?.data.canonical;
 ---
 
 {pageType === 'post' && currentPost && (
-	<BaseLayout title={currentPost.data.title} description={currentPost.data.description} locale="en" {...langProps}>
+	<BaseLayout title={currentPost.data.title} description={currentPost.data.description} locale="en" canonical={canonical} {...langProps}>
+		<Breadcrumbs locale="en" category={currentPost.data.categories[0]} title={currentPost.data.title} />
 		<BlogPost post={currentPost} />
+		<PrevNext posts={allPosts} current={currentPost} locale="en" />
 	</BaseLayout>
 )}
 
 {pageType === 'category' && (
 	<BaseLayout title={`Category: ${category}`} description={`Posts about ${category}`} locale="en" {...langProps}>
+		<Breadcrumbs locale="en" category={category} />
 		<h1>Category: {category}</h1>
-		<ul>
-			{allPosts.filter(p => p.data.categories.includes(category as string)).map(p => (
-				<li>
-					<a href={`/${p.id.split('/').pop()}`}>{p.data.title}</a>
-					<small> &mdash; {p.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</small>
-					<p>{p.data.description}</p>
-				</li>
-			))}
-		</ul>
+		<PostList posts={allPosts.filter(p => p.data.categories.includes(category as string))} />
 	</BaseLayout>
 )}

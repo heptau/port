@@ -139,7 +139,7 @@ body > header {
 body > header nav {
 	display: flex;
 	align-items: center;
-	gap: 0.25rem;
+	gap: 0.15rem;
 	flex-wrap: wrap;
 	flex: 1;
 }
@@ -166,6 +166,17 @@ body > header .active {
 
 .nav-spacer {
 	flex: 1;
+	min-width: 0.25rem;
+}
+
+@media (max-width: 480px) {
+	.nav-spacer:last-of-type {
+		display: none;
+	}
+	.theme-dropdown,
+	.lang-dropdown {
+		order: 5;
+	}
 }
 
 /* ── Nav icon buttons ───────────────────────────────── */
@@ -418,12 +429,6 @@ article header ul {
 }
 
 article header ul li {
-	font-family: var(--font-body);
-	font-size: 0.7rem;
-	padding: 0.2rem 0.55rem;
-	border: 1px solid var(--border);
-	border-radius: 4px;
-	color: var(--accent);
 	background: none;
 }
 

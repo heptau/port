@@ -1,0 +1,69 @@
+---
+export interface Props {
+  locale: string;
+  category?: string;
+  tag?: string;
+  title?: string;
+}
+
+const { locale, category, tag, title } = Astro.props;
+
+const homeHref = locale === 'en' ? '/' : `/${locale}`;
+
+const labels: Record<string, { home: string; archive: string; tag: string }> = {
+  en: { home: 'Home', archive: 'Archive', tag: 'Tag' },
+  cs: { home: 'Domů', archive: 'Archiv', tag: 'Tag' },
+  es: { home: 'Inicio', archive: 'Archivo', tag: 'Etiqueta' },
+  de: { home: 'Start', archive: 'Archiv', tag: 'Tag' },
+  pt: { home: 'Início', archive: 'Arquivo', tag: 'Tag' },
+};
+
+const t = labels[locale] ?? labels.en;
+---
+
+<nav aria-label="Breadcrumb">
+  <ol>
+    <li><a href={homeHref}>{t.home}</a></li>
+    {category && (
+      <li><a href={locale === 'en' ? `/${category}` : `/${locale}/${category}`}>{category}</a></li>
+    )}
+    {tag && <li><a href={locale === 'en' ? `/tag/${tag}` : `/${locale}/tag/${tag}`}>{t.tag}: {tag}</a></li>}
+    {title && <li aria-current="page">{title}</li>}
+  </ol>
+</nav>
+
+<style>
+  nav {
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
+  ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+    padding: 0;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  li + li::before {
+    content: '/';
+    color: var(--border);
+  }
+  a {
+    color: var(--text-dim);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--accent);
+  }
+  [aria-current] {
+    color: var(--text);
+    font-weight: 600;
+  }
+</style>

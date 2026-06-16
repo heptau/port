@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostList from '../../components/PostList.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -26,13 +27,5 @@ const t = labels[locale] ?? labels.cs;
 	<h1>port.80.cz</h1>
 	<p>{t.desc}</p>
 	<h2>{t.latest}</h2>
-	<ul>
-		{posts.slice(0, 5).map(post => (
-			<li>
-				<a href={`/${locale}/${post.id.split('/').pop()}`}>{post.data.title}</a>
-				<small>{post.data.date.toLocaleDateString(locale === 'cs' ? 'cs-CZ' : locale === 'es' ? 'es-ES' : locale === 'de' ? 'de-DE' : 'pt-PT', { year: 'numeric', month: 'long', day: 'numeric' })}</small>
-				<p>{post.data.description}</p>
-			</li>
-		))}
-	</ul>
+	<PostList posts={posts.slice(0, 5)} />
 </BaseLayout>

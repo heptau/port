@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://port.80.cz',
@@ -11,6 +12,7 @@ export default defineConfig({
     },
   },
   trailingSlash: 'never',
+  integrations: [sitemap()],
   devToolbar: { enabled: false },
   markdown: {
     shikiConfig: {

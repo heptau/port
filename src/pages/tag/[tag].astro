@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PostList from '../../components/PostList.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog', ({ data }) => data.locale === 'en' && !data.draft);
+	const tags = new Set<string>();
+	for (const post of posts) {
+		for (const tag of post.data.tags ?? []) {
+			tags.add(tag);
+		}
+	}
+	return Array.from(tags).map(tag => ({ params: { tag }, props: { tag } }));
+}
+
+const { tag } = Astro.params as { tag: string };
+
+const posts = await getCollection('blog', ({ data }) => data.locale === 'en' && !data.draft && (data.tags ?? []).includes(tag));
+posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout title={`Tag: ${tag} — port.80.cz`} description={`Posts tagged with ${tag}`} locale="en">
+	<Breadcrumbs locale="en" tag={tag} />
+	<h1>Tag: {tag}</h1>
+	<PostList posts={posts} />
+</BaseLayout>

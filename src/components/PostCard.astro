@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+
+const slug = post.id.split('/').pop();
+const href = post.data.locale === 'en' ? `/${slug}` : `/${post.data.locale}/${slug}`;
+
+const dateLocale = post.data.locale === 'en' ? 'en-US'
+  : post.data.locale === 'cs' ? 'cs-CZ'
+  : post.data.locale === 'es' ? 'es-ES'
+  : post.data.locale === 'de' ? 'de-DE'
+  : 'pt-PT';
+---
+
+<li>
+  <a href={href}>{post.data.title}</a>
+  <small>{post.data.date.toLocaleDateString(dateLocale, { year: 'numeric', month: 'short', day: 'numeric' })}</small>
+  <p>{post.data.description}</p>
+</li>

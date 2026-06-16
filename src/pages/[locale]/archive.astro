@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PostList from '../../components/PostList.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+	const locales = ['cs', 'es', 'de', 'pt'];
+	return locales.map(locale => ({ params: { locale }, props: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: string };
+
+const posts = await getCollection('blog', ({ data }) => data.locale === locale && !data.draft);
+posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const ARCHIVE_LABELS: Record<string, string> = {
+	cs: 'Archiv',
+	es: 'Archivo',
+	de: 'Archiv',
+	pt: 'Arquivo',
+};
+
+const langProps = { enPath: '/archive', csPath: '/cs/archive', esPath: '/es/archive', dePath: '/de/archive', ptPath: '/pt/archive' };
+const archiveLabel = ARCHIVE_LABELS[locale as string] ?? 'Archive';
+---
+
+<BaseLayout title={`${archiveLabel} — port.80.cz`} description={`All blog posts in ${locale}`} locale={locale} {...langProps}>
+	<Breadcrumbs locale={locale} title={archiveLabel} />
+	<h1>{archiveLabel}</h1>
+	<PostList posts={posts} />
+</BaseLayout>

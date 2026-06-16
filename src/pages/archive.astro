@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PostList from '../components/PostList.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog', ({ data }) => data.locale === 'en' && !data.draft);
+posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout title="Archive — port.80.cz" description="All blog posts" locale="en">
+	<Breadcrumbs locale="en" title="Archive" />
+	<h1>Archive</h1>
+	<PostList posts={posts} />
+</BaseLayout>

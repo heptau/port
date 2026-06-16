@@ -1,0 +1,71 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  posts: CollectionEntry<'blog'>[];
+  current: CollectionEntry<'blog'>;
+  locale: string;
+}
+
+const { posts, current, locale } = Astro.props;
+
+const idx = posts.findIndex(p => p.id === current.id);
+const prev = idx > 0 ? posts[idx - 1] : null;
+const next = idx < posts.length - 1 ? posts[idx + 1] : null;
+
+function postHref(post: CollectionEntry<'blog'>): string {
+  const slug = post.id.split('/').pop();
+  return post.data.locale === 'en' ? `/${slug}` : `/${post.data.locale}/${slug}`;
+}
+---
+
+<nav aria-label="Post navigation">
+  {next && (
+    <a href={postHref(next)} class="prev">
+      <span class="dir">&larr; {next.data.title}</span>
+    </a>
+  )}
+  {prev && (
+    <a href={postHref(prev)} class="next">
+      <span class="dir">{prev.data.title} &rarr;</span>
+    </a>
+  )}
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  a {
+    text-decoration: none;
+    color: var(--text);
+    max-width: 50%;
+    transition: color 0.15s ease;
+  }
+  a:hover {
+    color: var(--accent);
+  }
+  a:only-child {
+    max-width: 100%;
+  }
+  .dir {
+    display: block;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+  nav:has(a:only-child) {
+    justify-content: flex-start;
+  }
+  a.next {
+    text-align: right;
+  }
+  a:only-child.next {
+    margin-left: auto;
+  }
+</style>

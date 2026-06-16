@@ -22,7 +22,27 @@ const { Content } = await render(post);
       })}
     </time>
     <p>{post.data.description}</p>
-    {post.data.tags && <ul>{post.data.tags.map(tag => <li>{tag}</li>)}</ul>}
+    {post.data.tags && <ul>{post.data.tags.map(tag => (
+      <li><a href={post.data.locale === 'en' ? `/tag/${tag}` : `/${post.data.locale}/tag/${tag}`}>{tag}</a></li>
+    ))}</ul>}
   </header>
   <Content />
 </article>
+
+<style>
+  header ul li a {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    color: var(--accent);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.2rem 0.55rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: all 0.15s ease;
+  }
+  header ul li a:hover {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+  }
+</style>
