@@ -45,5 +45,5 @@ typo:
 typo-fix:
 	@for lang in cs en de es pt; do \
 		echo "── $$lang ──────────────────────────"; \
-		typolima --lang $$lang --recursive --in-place --backup src/content/blog/$$lang/; \
+		typolima --lang $$lang --recursive --in-place src/content/blog/$$lang/; \
 	done
