@@ -5,6 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import PrevNext from '../../components/PrevNext.astro';
 import PostList from '../../components/PostList.astro';
 import { getCollection } from 'astro:content';
+import { isPublished } from '../../utils/published';
 
 const LOCALES = ['en', 'cs', 'es', 'de', 'pt'] as const;
 
@@ -14,7 +15,7 @@ export async function getStaticPaths() {
 	const allPages: { params: { locale: string; path?: string }; props: Record<string, unknown> }[] = [];
 
 	for (const locale of locales) {
-		const posts = await getCollection('blog', ({ data }) => data.locale === locale && !data.draft);
+		const posts = await getCollection('blog', ({ data }) => data.locale === locale && isPublished(data));
 
 		for (const category of ALL_CATEGORIES) {
 			allPages.push({ params: { locale, path: category }, props: { pageType: 'category', category, locale } });
@@ -34,7 +35,7 @@ const { pageType, slug, category } = Astro.props as Record<string, unknown>;
 
 const LABELS: Record<string, string> = { cs: 'Kategorie', es: 'Categoría', de: 'Kategorie', pt: 'Categoria' };
 
-const allPosts = await getCollection('blog', ({ data }) => data.locale === locale && !data.draft);
+const allPosts = await getCollection('blog', ({ data }) => data.locale === locale && isPublished(data));
 allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
 function localePath(l: string, cat?: string): string {
@@ -53,7 +54,7 @@ if (pageType === 'category') {
 		langPaths[locale as string] = `/${locale}/${currentPost.id.split('/').pop()}`;
 		if (currentPost.data.translation_id) {
 			const translations = await getCollection('blog', ({ data }) =>
-				data.translation_id === currentPost!.data.translation_id);
+				isPublished(data) && data.translation_id === currentPost!.data.translation_id);
 			for (const l of LOCALES) {
 				if (l === locale) continue;
 				const t = translations.find(e => e.data.locale === l);

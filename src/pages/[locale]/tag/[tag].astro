@@ -3,6 +3,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import PostList from '../../../components/PostList.astro';
 import { getCollection } from 'astro:content';
+import { isPublished } from '../../../utils/published';
 
 const TAG_LABELS: Record<string, string> = {
 	cs: 'Tag',
@@ -16,7 +17,7 @@ export async function getStaticPaths() {
 	const pages: { params: { locale: string; tag: string }; props: Record<string, unknown> }[] = [];
 
 	for (const locale of locales) {
-		const posts = await getCollection('blog', ({ data }) => data.locale === locale && !data.draft);
+		const posts = await getCollection('blog', ({ data }) => data.locale === locale && isPublished(data));
 		const tags = new Set<string>();
 		for (const post of posts) {
 			for (const tag of post.data.tags ?? []) {
@@ -33,14 +34,14 @@ export async function getStaticPaths() {
 
 const { locale, tag } = Astro.params as { locale: string; tag: string };
 
-const posts = await getCollection('blog', ({ data }) => data.locale === locale && !data.draft && (data.tags ?? []).includes(tag));
+const posts = await getCollection('blog', ({ data }) => data.locale === locale && isPublished(data) && (data.tags ?? []).includes(tag));
 posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
 const langPaths: Record<string, string> = { en: `/tag/${tag}`, cs: '/cs', es: '/es', de: '/de', pt: '/pt' };
 
 const checkLocales = ['cs', 'es', 'de', 'pt'];
 for (const l of checkLocales) {
-	const tposts = await getCollection('blog', ({ data }) => data.locale === l && !data.draft && (data.tags ?? []).includes(tag));
+	const tposts = await getCollection('blog', ({ data }) => data.locale === l && isPublished(data) && (data.tags ?? []).includes(tag));
 	if (tposts.length > 0) {
 		langPaths[l] = `/${l}/tag/${tag}`;
 	}

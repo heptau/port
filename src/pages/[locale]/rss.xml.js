@@ -1,5 +1,6 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
+import { isPublished } from '../../utils/published';
 
 const LOCALE_LABELS = {
 	cs: { title: 'port.80.cz — Česky', lang: 'cs' },
@@ -17,7 +18,7 @@ export async function GET({ params, site }) {
 	const meta = LOCALE_LABELS[locale];
 	if (!meta) return new Response(null, { status: 404 });
 
-	const posts = await getCollection('blog', ({ data }) => data.locale === locale && !data.draft);
+	const posts = await getCollection('blog', ({ data }) => data.locale === locale && isPublished(data));
 	posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
 	return rss({

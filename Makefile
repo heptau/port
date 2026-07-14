@@ -1,4 +1,4 @@
-.PHONY: help dev build preview clean install lint format typo typo-fix
+.PHONY: help dev build preview preview-build clean install lint format typo typo-fix
 
 help:
 	@echo "Usage: make <target>"
@@ -6,8 +6,9 @@ help:
 	@echo "Targets:"
 	@echo "  help      Show this help"
 	@echo "  dev       Start Astro dev server"
-	@echo "  build     Build site for production (output: dist/)"
-	@echo "  preview   Preview production build locally"
+	@echo "  build         Build site for production (output: dist/)"
+	@echo "  preview       Preview production build locally"
+	@echo "  preview-build Build with PUBLIC_PREVIEW=true (shows future posts)"
 	@echo "  clean     Remove dist/ and node_modules/.astro"
 	@echo "  install   Install dependencies"
 	@echo "  lint      Check for Astro issues"
@@ -23,6 +24,9 @@ build:
 
 preview:
 	npm run preview
+
+preview-build:
+	PUBLIC_PREVIEW=true npm run build
 
 clean:
 	rm -rf dist .astro node_modules/.astro

@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostList from '../../components/PostList.astro';
 import { getCollection } from 'astro:content';
+import { isPublished } from '../../utils/published';
 
 export async function getStaticPaths() {
 	const locales = ['cs', 'es', 'de', 'pt'];
@@ -10,7 +11,7 @@ export async function getStaticPaths() {
 
 const { locale } = Astro.params as { locale: string };
 
-const posts = await getCollection('blog', ({ data }) => data.locale === locale && !data.draft);
+const posts = await getCollection('blog', ({ data }) => data.locale === locale && isPublished(data));
 posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
 const labels: Record<string, { home: string; blog: string; latest: string; desc: string }> = {

@@ -2,8 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostList from '../components/PostList.astro';
 import { getCollection } from 'astro:content';
+import { isPublished } from '../utils/published';
 
-const posts = await getCollection('blog', ({ data }) => data.locale === 'en' && !data.draft);
+const posts = await getCollection('blog', ({ data }) => data.locale === 'en' && isPublished(data));
 posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
