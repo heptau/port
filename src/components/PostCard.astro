@@ -17,7 +17,7 @@ const dateLocale = post.data.locale === 'en' ? 'en-US'
   : 'pt-PT';
 ---
 
-<li>
+<li data-publish-date={post.data.date.toISOString()}>
   <a href={href}>{post.data.title}</a>
   <small>{post.data.date.toLocaleDateString(dateLocale, { year: 'numeric', month: 'short', day: 'numeric' })}</small>
   <p>{post.data.description}</p>

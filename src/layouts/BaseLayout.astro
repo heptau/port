@@ -137,6 +137,16 @@ const tt = NAV_TOOLTIPS[locale] ?? NAV_TOOLTIPS.en;
 			<slot />
 		</main>
 		<script>
+			(function() {
+				var els = document.querySelectorAll('[data-publish-date]');
+				var now = new Date();
+				for (var i = 0; i < els.length; i++) {
+					if (new Date(els[i].getAttribute('data-publish-date')) > now) {
+						els[i].style.display = 'none';
+					}
+				}
+			})();
+
 			const themeDropdown = document.querySelector('.theme-dropdown');
 			const themeTrigger = document.querySelector('.theme-trigger');
 			const themeOptions = document.querySelectorAll('.theme-option');
