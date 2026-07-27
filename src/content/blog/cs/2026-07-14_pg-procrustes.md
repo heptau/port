@@ -41,7 +41,7 @@ GROUP BY d
 ORDER BY e;
 ```
 
-Aby formátovač věděl, že `SELECT`, `FROM`, `WHERE` jsou klauzule stejné úrovně (a ne například vnořené bloky), musí **skutečně rozumět gramatice SQL**.
+Aby formátovač věděl, že `SELECT`, `FROM`, `WHERE` jsou klauzule stejné úrovně (a ne například vnořené bloky), musí **skutečně rozumět gramatice SQL**.
 
 ### DDL je ještě horší
 
@@ -340,7 +340,7 @@ repos:
 Když se podíváme na úspěch `gofmt`, `rustfmt` nebo `prettier`, vidíme společný vzorec:
 
 1. **Jeden nástroj, kterému komunita důvěřuje.**
-2. **Natolik konfigurovatelný, že pokryje 99 % potřeb.**
+2. **Natolik konfigurovatelný, že pokryje 99 % potřeb.**
 3. **Natolik pevný, že eliminuje nekonečné diskuze o formátování v code review.**
 
 pg_procrustes má ambici být tímto nástrojem pro PostgreSQL ekosystém. Použití nativního parseru `libpg_query` je klíčová výhoda — pokud formátovač rozumí vašemu kódu stejně jako databáze, odpadá celá třída chyb, kde formátovač něco „poladí“ tak, že to změní význam dotazu.

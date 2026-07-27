@@ -9,13 +9,13 @@ draft: false
 translation_id: "2026-07-14_1"
 ---
 
-En el desarrollo de software moderno, damos por sentado el formateo automático del código. Go tiene `gofmt` integrado directamente en su cadena de herramientas — nadie discute sobre sangrías o posición de llaves porque la máquina lo decidió por todos. Rust tiene `rustfmt`, Python tiene `black` (inflexible, sin opciones — y eso es bueno), y el ecosistema JavaScript se ha unificado en `prettier`.
+En el desarrollo de software moderno, damos por sentado el formateo automático del código. Go tiene `gofmt` integrado directamente en su cadena de herramientas — nadie discute sobre sangrías o posición de llaves porque la máquina lo decidió por todos. Rust tiene `rustfmt`, Python tiene `black` (inflexible, sin opciones — y eso es bueno), y el ecosistema JavaScript se ha unificado en `prettier`.
 
-Y luego está **SQL**.
+Y luego está **SQL**.
 
-Una tierra donde cada desarrollador, cada equipo, cada empresa define su propio "estándar". Algunos escriben las palabras clave en mayúsculas, otros en minúsculas, otros combinadas. Unos sangran con cuatro espacios, otros con dos, otros con tabuladores. Unos escriben `INNER JOIN` en una línea, otros dividen cada cláusula por separado.
+Una tierra donde cada desarrollador, cada equipo, cada empresa define su propio «estándar». Algunos escriben las palabras clave en mayúsculas, otros en minúsculas, otros combinadas. Unos sangran con cuatro espacios, otros con dos, otros con tabuladores. Unos escriben `INNER JOIN` en una línea, otros dividen cada cláusula por separado.
 
-Este artículo explica por qué el formateo de SQL es un desafío único que se resiste a soluciones simples, y presenta [pg_procrustes](https://pg_procrustes.80.cz) — una nueva herramienta que aborda el problema de forma radicalmente diferente: utiliza el mismo parser que PostgreSQL.
+Este artículo explica por qué el formateo de SQL es un desafío único que se resiste a soluciones simples, y presenta [pg_procrustes](https://pg_procrustes.80.cz) — una nueva herramienta que aborda el problema de forma radicalmente diferente: utiliza el mismo parser que PostgreSQL.
 
 ---
 
@@ -25,7 +25,7 @@ La razón por la que SQL carece de un formateador universalmente aceptado no es 
 
 ### SQL no está estructurado como los lenguajes imperativos
 
-En Go o Rust, el código es una secuencia de sentencias ejecutadas de arriba abajo. Las reglas de formateo son relativamente simples: sangrar un bloque, alinear parámetros, normalizar espacios en blanco.
+En Go o Rust, el código es una secuencia de sentencias ejecutadas de arriba abajo. Las reglas de formateo son relativamente simples: sangrar un bloque, alinear parámetros, normalizar espacios en blanco.
 
 SQL es declarativo. Una sentencia `SELECT` se compone de cláusulas (`SELECT`, `FROM`, `WHERE`, `GROUP BY`, `HAVING`, `ORDER BY`, `LIMIT`, `OFFSET`), pero su orden no se trata de ejecución — se trata de la lógica de la consulta. Un formateador debe entender estas cláusulas para distribuirlas de manera significativa.
 
@@ -41,7 +41,7 @@ GROUP BY d
 ORDER BY e;
 ```
 
-Para que un formateador sepa que `SELECT`, `FROM` y `WHERE` son cláusulas del mismo nivel (y no bloques anidados), debe **entender realmente la gramática de SQL**.
+Para que un formateador sepa que `SELECT`, `FROM` y `WHERE` son cláusulas del mismo nivel (y no bloques anidados), debe **entender realmente la gramática de SQL**.
 
 ### DDL es aún más complejo
 
@@ -69,7 +69,7 @@ CREATE TABLE public.orders (
 
 ¿Cómo formatear esto? Cada uno tiene una opinión diferente. Algunos quieren las restricciones sangradas debajo de las columnas, otros al mismo nivel. Algunos quieren los parámetros de almacenamiento en una línea separada, otros prefieren que estén al final del encabezado.
 
-Ningún formateador basado en expresiones regulares puede manejar esto de forma confiable — necesitas un **parser real** que entienda qué es una columna, qué es una restricción y qué es un parámetro de almacenamiento.
+Ningún formateador basado en expresiones regulares puede manejar esto de forma confiable — necesitas un **parser real** que entienda qué es una columna, qué es una restricción y qué es un parámetro de almacenamiento.
 
 ---
 
@@ -79,15 +79,15 @@ Al observar el panorama actual de formateadores SQL, surgen varios problemas rec
 
 ### Formateadores basados en regex
 
-Herramientas como `pg_format` (también conocido como `sqlformat`) están escritas en Perl y funcionan principalmente a nivel de expresiones regulares. Manejan sentencias `SELECT` simples razonablemente bien, pero cuando se encuentran con sintaxis más compleja — bloques PL/pgSQL con condicionales anidados, `CREATE POLICY`, tipos de datos compuestos — comienzan a fallar.
+Herramientas como `pg_format` (también conocido como `sqlformat`) están escritas en Perl y funcionan principalmente a nivel de expresiones regulares. Manejan sentencias `SELECT` simples razonablemente bien, pero cuando se encuentran con sintaxis más compleja — bloques PL/pgSQL con condicionales anidados, `CREATE POLICY`, tipos de datos compuestos — comienzan a fallar.
 
-Las expresiones regulares no tienen estado. No pueden determinar correctamente dónde termina una expresión `CASE` y dónde comienza un nuevo `WHEN`, porque necesitarían conocer el contexto — cuántos niveles de anidamiento están procesando actualmente.
+Las expresiones regulares no tienen estado. No pueden determinar correctamente dónde termina una expresión `CASE` y dónde comienza un nuevo `WHEN`, porque necesitarían conocer el contexto — cuántos niveles de anidamiento están procesando actualmente.
 
 ### Formateadores universales con su propio parser
 
-Una herramienta como `SQLFluff` está escrita en Python y tiene su propio parser SQL. Es extremadamente flexible (cientos de reglas configurables), pero su parser no es el mismo que el de PostgreSQL. Esto significa que pueden surgir situaciones donde SQLFluff interprete la sintaxis de manera diferente a la base de datos.
+Una herramienta como `SQLFluff` está escrita en Python y tiene su propio parser SQL. Es extremadamente flexible (cientos de reglas configurables), pero su parser no es el mismo que el de PostgreSQL. Esto significa que pueden surgir situaciones donde SQLFluff interprete la sintaxis de manera diferente a la base de datos.
 
-Además, SQLFluff es más lento — analizar y reescribir un archivo de migración grande puede llevar de segundos a decenas de segundos. Para uso interactivo en el editor, eso se nota.
+Además, SQLFluff es más lento — analizar y reescribir un archivo de migración grande puede llevar de segundos a decenas de segundos. Para uso interactivo en el editor, eso se nota.
 
 ### Formateadores que no entienden PostgreSQL
 
@@ -101,21 +101,21 @@ Ninguna de las herramientas existentes utiliza **libpg_query** — la biblioteca
 
 **Utiliza `libpg_query` — el mismo parser que PostgreSQL.**
 
-Esto significa que si PostgreSQL puede leer tu sentencia SQL y construir un árbol sintáctico abstracto (AST) a partir de ella, pg_procrustes la entiende exactamente de la misma manera. No hay margen para diferencias de interpretación.
+Esto significa que si PostgreSQL puede leer tu sentencia SQL y construir un árbol sintáctico abstracto (AST) a partir de ella, pg_procrustes la entiende exactamente de la misma manera. No hay margen para diferencias de interpretación.
 
 ### El principio de Procusto
 
-El nombre de la herramienta no es casual. En la mitología griega, Procusto ofrecía a los viajeros una noche de descanso — luego los estiraba o cortaba para que cupieran en su cama de hierro. pg_procrustes funciona igual: **tú defines la cama (reglas de configuración) y tu SQL encajará. Le guste o no.**
+El nombre de la herramienta no es casual. En la mitología griega, Procusto ofrecía a los viajeros una noche de descanso — luego los estiraba o cortaba para que cupieran en su cama de hierro. pg_procrustes funciona igual: **tú defines la cama (reglas de configuración) y tu SQL encajará. Le guste o no.**
 
 ### Comportamiento por defecto: Nada
 
-Una diferencia filosófica fundamental respecto a otros formateadores: pg_procrustes no cambia nada por defecto. Todos los ajustes tienen el valor `preserve`. Si no existe `.pg_procrustes.yaml`, el formateador lee el archivo y no realiza ningún cambio.
+Una diferencia filosófica fundamental respecto a otros formateadores: pg_procrustes no cambia nada por defecto. Todos los ajustes tienen el valor `preserve`. Si no existe `.pg_procrustes.yaml`, el formateador lee el archivo y no realiza ningún cambio.
 
 ```yaml
 # Esta es una configuración completa — nada cambiará:
 ```
 
-Este enfoque es crucial para la adopción en proyectos existentes. Puedes implementar pg_procrustes ahora mismo sin que cambie nada, e ir activando reglas gradualmente hasta donde tu equipo se sienta cómodo.
+Este enfoque es crucial para la adopción en proyectos existentes. Puedes implementar pg_procrustes ahora mismo sin que cambie nada, e ir activando reglas gradualmente hasta donde tu equipo se sienta cómodo.
 
 ---
 
@@ -161,7 +161,7 @@ columns:
 
 ### Layout — fin de los debates sobre sangría
 
-pg_procrustes admite espacios y tabuladores con ancho configurable y normalización. Pero más importante aún, ofrece ruptura inteligente de cláusulas y contenido:
+pg_procrustes admite espacios y tabuladores con ancho configurable y normalización. Pero más importante aún, ofrece ruptura inteligente de cláusulas y contenido:
 
 ```yaml
 layout:
@@ -202,7 +202,7 @@ WHERE condition1 = TRUE
 INNER JOIN other ON other.id = schema.table.ref_id
 ```
 
-O este (según la configuración de `first_item`):
+O este (según la configuración de `first_item`):
 
 ```sql
 SELECT
@@ -215,7 +215,7 @@ WHERE
     AND condition2 = FALSE
 ```
 
-### Puntuación y detalles
+### Puntuación y detalles
 
 pg_procrustes maneja cientos de pequeños detalles que hacen del formateo un oficio:
 
@@ -233,7 +233,7 @@ schema_qualification: remove_public  # eliminar prefijo public.
 
 ### DDL — formateo de CREATE TABLE
 
-pg_procrustes analiza las sentencias DDL igual que PostgreSQL, por lo que puede formatear inteligentemente `CREATE TABLE` con restricciones, parámetros de almacenamiento y tablespaces:
+pg_procrustes analiza las sentencias DDL igual que PostgreSQL, por lo que puede formatear inteligentemente `CREATE TABLE` con restricciones, parámetros de almacenamiento y tablespaces:
 
 Entrada:
 
@@ -255,11 +255,11 @@ CREATE TABLE public.orders (
 ) WITH (fillfactor = 90) TABLESPACE fast_space;
 ```
 
-Observa que `timestamp with time zone` se acortó a `timestamptz` según la configuración `form: short`.
+Observa que `timestamp with time zone` se acortó a `timestamptz` según la configuración `form: short`.
 
 ### PL/pgSQL — dentro del cuerpo de funciones
 
-Una de las áreas más difíciles del formateo SQL es PL/pgSQL. La mayoría de las herramientas no procesan el cuerpo de la función dentro de `$$`, o lo procesan incorrectamente.
+Una de las áreas más difíciles del formateo SQL es PL/pgSQL. La mayoría de las herramientas no procesan el cuerpo de la función dentro de `$$`, o lo procesan incorrectamente.
 
 pg_procrustes formatea recursivamente los cuerpos de funciones con dollar-quoting:
 
@@ -288,7 +288,7 @@ END;
 $$;
 ```
 
-La configuración de bloques PL/pgSQL permite establecer la sangría para `DECLARE`, `BEGIN`, `END`, el formateo de construcciones `IF/CASE/LOOP`, añadir o eliminar punto y coma después de `END`, y cientos de otros detalles.
+La configuración de bloques PL/pgSQL permite establecer la sangría para `DECLARE`, `BEGIN`, `END`, el formateo de construcciones `IF/CASE/LOOP`, añadir o eliminar punto y coma después de `END`, y cientos de otros detalles.
 
 ---
 
@@ -296,7 +296,7 @@ La configuración de bloques PL/pgSQL permite establecer la sangría para `DECLA
 
 ### Interfaz CLI
 
-pg_procrustes es un solo binario (instalado vía Homebrew o GitHub Releases), sin dependencias:
+pg_procrustes es un solo binario (instalado vía Homebrew o GitHub Releases), sin dependencias:
 
 ```bash
 # Formatear un archivo in situ
@@ -314,7 +314,7 @@ pg_procrustes --diff query.sql
 
 ### CI/CD
 
-La forma más sencilla de mantener un formateo consistente en un equipo es añadir una verificación a tu pipeline de CI:
+La forma más sencilla de mantener un formateo consistente en un equipo es añadir una verificación a tu pipeline de CI:
 
 ```yaml
 # GitHub Actions
@@ -337,24 +337,24 @@ repos:
 
 ## 6. Ambición: Ser el gofmt de PostgreSQL
 
-Al observar el éxito de `gofmt`, `rustfmt` o `prettier`, vemos un patrón común:
+Al observar el éxito de `gofmt`, `rustfmt` o `prettier`, vemos un patrón común:
 
 1. **Una sola herramienta en la que la comunidad confía.**
-2. **Suficientemente configurable para cubrir el 99% de las necesidades.**
+2. **Suficientemente configurable para cubrir el 99 % de las necesidades.**
 3. **Suficientemente firme para eliminar los interminables debates sobre formateo en las revisiones de código.**
 
-pg_procrustes aspira a ser esa herramienta para el ecosistema PostgreSQL. Usar el parser nativo `libpg_query` es su ventaja clave — si el formateador entiende tu código igual que la base de datos, desaparece toda una clase de errores donde un formateador "ajusta" algo y cambia el significado de la consulta.
+pg_procrustes aspira a ser esa herramienta para el ecosistema PostgreSQL. Usar el parser nativo `libpg_query` es su ventaja clave — si el formateador entiende tu código igual que la base de datos, desaparece toda una clase de errores donde un formateador «ajusta» algo y cambia el significado de la consulta.
 
-La herramienta está actualmente en desarrollo activo. La retroalimentación de usuarios reales determinará su dirección. Si el formateo SQL te frustra, pruébala y dinos qué falta o qué podría funcionar de otra manera.
+La herramienta está actualmente en desarrollo activo. La retroalimentación de usuarios reales determinará su dirección. Si el formateo SQL te frustra, pruébala y dinos qué falta o qué podría funcionar de otra manera.
 
 ---
 
 ## Conclusión: El formateo SQL no es una causa perdida
 
-El formateo automático de SQL es más difícil que el de la mayoría de los lenguajes de programación. SQL es declarativo, tiene una gramática compleja, DDL añade su propia capa de complejidad y PL/pgSQL es prácticamente un lenguaje dentro de un lenguaje.
+El formateo automático de SQL es más difícil que el de la mayoría de los lenguajes de programación. SQL es declarativo, tiene una gramática compleja, DDL añade su propia capa de complejidad y PL/pgSQL es prácticamente un lenguaje dentro de un lenguaje.
 
-Pero no es imposible. Al abordar el problema con respeto por la gramática real de PostgreSQL (en lugar de expresiones regulares o parsers personalizados), se abre un camino hacia una herramienta que puede unificar el formateo SQL entre equipos, proyectos y empresas.
+Pero no es imposible. Al abordar el problema con respeto por la gramática real de PostgreSQL (en lugar de expresiones regulares o parsers personalizados), se abre un camino hacia una herramienta que puede unificar el formateo SQL entre equipos, proyectos y empresas.
 
 pg_procrustes no es otro intento de formateador SQL. Es un intento de hacerlo bien.
 
-Más en [pg_procrustes.80.cz](https://pg_procrustes.80.cz) y [GitHub](https://github.com/heptau/pg_procrustes).
+Más en [pg_procrustes.80.cz](https://pg_procrustes.80.cz) y [GitHub](https://github.com/heptau/pg_procrustes).

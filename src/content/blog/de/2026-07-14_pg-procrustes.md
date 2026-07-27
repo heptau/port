@@ -13,7 +13,7 @@ In der modernen Softwareentwicklung ist automatische Code-Formatierung selbstver
 
 Und dann ist da **SQL**.
 
-Ein Land, in dem jeder Entwickler, jedes Team, jedes Unternehmen seinen eigenen "Standard" definiert. Manche schreiben Schlüsselwörter in Großbuchstaben, manche in Kleinbuchstaben, manche gemischt. Manche rücken mit vier Leerzeichen ein, manche mit zwei, manche mit Tabs. Manche schreiben `INNER JOIN` in eine Zeile, andere brechen jede Klausel einzeln um.
+Ein Land, in dem jeder Entwickler, jedes Team, jedes Unternehmen seinen eigenen „Standard“ definiert. Manche schreiben Schlüsselwörter in Großbuchstaben, manche in Kleinbuchstaben, manche gemischt. Manche rücken mit vier Leerzeichen ein, manche mit zwei, manche mit Tabs. Manche schreiben `INNER JOIN` in eine Zeile, andere brechen jede Klausel einzeln um.
 
 Dieser Artikel erklärt, warum SQL-Formatierung eine einzigartige Herausforderung ist, die sich einfachen Lösungen widersetzt, und stellt [pg_procrustes](https://pg_procrustes.80.cz) vor — ein neues Tool, das einen radikal anderen Ansatz verfolgt: Es verwendet denselben Parser wie PostgreSQL selbst.
 
@@ -340,10 +340,10 @@ repos:
 Betrachtet man den Erfolg von `gofmt`, `rustfmt` oder `prettier`, erkennt man ein gemeinsames Muster:
 
 1. **Ein einzelnes Tool, dem die Community vertraut.**
-2. **Konfigurierbar genug, um 99% der Bedürfnisse abzudecken.**
+2. **Konfigurierbar genug, um 99 % der Bedürfnisse abzudecken.**
 3. **Fest genug, um endlose Formatierungsdebatten im Code-Review zu eliminieren.**
 
-pg_procrustes strebt danach, dieses Tool für das PostgreSQL-Ökosystem zu sein. Die Verwendung des nativen `libpg_query`-Parsers ist sein entscheidender Vorteil — wenn der Formatierer deinen Code genauso versteht wie die Datenbank, entfällt eine ganze Klasse von Fehlern, bei denen ein Formatierer etwas "optimiert" und dadurch die Bedeutung der Abfrage ändert.
+pg_procrustes strebt danach, dieses Tool für das PostgreSQL-Ökosystem zu sein. Die Verwendung des nativen `libpg_query`-Parsers ist sein entscheidender Vorteil — wenn der Formatierer deinen Code genauso versteht wie die Datenbank, entfällt eine ganze Klasse von Fehlern, bei denen ein Formatierer etwas „optimiert“ und dadurch die Bedeutung der Abfrage ändert.
 
 Das Tool befindet sich derzeit in aktiver Entwicklung. Rückmeldungen von echten Benutzern werden seine Richtung bestimmen. Wenn dich SQL-Formatierung frustriert, probiere es aus und lass uns wissen, was fehlt oder was anders funktionieren könnte.
 
