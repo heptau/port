@@ -1,5 +1,13 @@
 .PHONY: help dev build preview preview-build clean install lint format typo typo-fix
 
+# Mac requires an empty string arg after -i, Linux does not.
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Darwin)
+	SED_CMD = sed -i ''
+else
+	SED_CMD = sed -i
+endif
+
 help:
 	@echo "Usage: make <target>"
 	@echo ""
@@ -49,5 +57,11 @@ typo:
 typo-fix:
 	@for lang in cs en de es pt; do \
 		echo "── $$lang ──────────────────────────"; \
-		typolima --lang $$lang --recursive --in-place src/content/blog/$$lang/; \
+		i=0; \
+		while [ $$i -lt 5 ] && typolima --lang $$lang --recursive --in-place src/content/blog/$$lang/ | grep -q '^Fixed: '; do \
+			i=$$((i+1)); \
+		done; \
+		if [ $$i -eq 5 ]; then echo "  (warning: $$lang did not converge after 5 passes)"; fi; \
 	done
+	@echo "── reverting known Typolima artifact (',. X' -> ', .X', e.g. '.NET') ──"
+	@grep -rlE ',\. [A-Z]' src/content/blog/ 2>/dev/null | xargs -I{} $(SED_CMD) -E 's/,\. ([A-Z])/, .\1/g' {} || true

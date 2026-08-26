@@ -41,7 +41,7 @@ GROUP BY d
 ORDER BY e;
 ```
 
-For a formatter to know that `SELECT`, `FROM`, and `WHERE` are same-level clauses (not nested blocks), it must **actually understand SQL grammar**.
+For a formatter to know that `SELECT`, `FROM`, and `WHERE` are same-level clauses (not nested blocks), it must **actually understand SQL grammar**.
 
 ### DDL is even harder
 
@@ -53,7 +53,7 @@ A `CREATE TABLE` isn’t a homogeneous list. It contains:
 - storage parameters (`WITH (fillfactor = 90)`),
 - `TABLESPACE`,
 - `COMMENT ON`,
-- all of which may appear in any order (with a few exceptions imposed by the PostgreSQL parser).
+- all of which may appear in any order (with a few exceptions imposed by the PostgreSQL parser).
 
 ```sql
 CREATE TABLE public.orders (
@@ -67,7 +67,7 @@ CREATE TABLE public.orders (
 ) WITH (fillfactor = 90) TABLESPACE fast_space;
 ```
 
-How do you format this? Everyone has a different opinion. Some want constraints indented below columns, some want them at the same level. Some want storage parameters on a separate line, others are fine with them at the end of the header.
+How do you format this? Everyone has a different opinion. Some want constraints indented below columns, some want them at the same level. Some want storage parameters on a separate line, others are fine with them at the end of the header.
 
 No regex-based formatter can handle this reliably — you need a **real parser** that understands what is a column, what is a constraint, and what is a storage parameter.
 
@@ -75,11 +75,11 @@ No regex-based formatter can handle this reliably — you need a **real parser*
 
 ## 2. Why Existing Tools Fall Short
 
-Looking at the current landscape of SQL formatters, several recurring problems emerge.
+Looking at the current landscape of SQL formatters, several recurring problems emerge.
 
 ### Regex-based formatters
 
-Tools like `pg_format` (also known as `sqlformat`) are written in Perl and work primarily at the regex level. They handle simple `SELECT` statements reasonably well, but as soon as they encounter more complex syntax — PL/pgSQL blocks with nested conditionals, `CREATE POLICY`, composite data types — they start failing.
+Tools like `pg_format` (also known as `sqlformat`) are written in Perl and work primarily at the regex level. They handle simple `SELECT` statements reasonably well, but as soon as they encounter more complex syntax — PL/pgSQL blocks with nested conditionals, `CREATE POLICY`, composite data types — they start failing.
 
 Regular expressions are stateless. They cannot correctly determine where a `CASE` expression ends and a new `WHEN` begins, because they would need to know the context — how many nesting levels they’re currently processing.
 
@@ -91,7 +91,7 @@ Moreover, SQLFluff is slower — analyzing and rewriting a large migration file
 
 ### Formatters that don’t understand PostgreSQL
 
-None of the existing tools use **libpg_query** — the library that encapsulates the real C parser of PostgreSQL. That’s a fundamental difference. If a formatter doesn’t use the same parser as the database, there will always be a class of errors where interpretations diverge.
+None of the existing tools use **libpg_query** — the library that encapsulates the real C parser of PostgreSQL. That’s a fundamental difference. If a formatter doesn’t use the same parser as the database, there will always be a class of errors where interpretations diverge.
 
 ---
 
@@ -121,7 +121,7 @@ This approach is crucial for adoption in existing projects. You can deploy pg_
 
 ## 4. What Can Be Configured
 
-Configuration lives in a YAML file `.pg_procrustes.yaml`. Let’s break down the available options.
+Configuration lives in a YAML file `.pg_procrustes.yaml`. Let’s break down the available options.
 
 ### Casing — every token class separately
 
@@ -148,7 +148,7 @@ plpgsql_variables: { case: upper }        # NEW, OLD, TG_OP, FOUND
 plpgsql_keywords:  { case: upper }        # RAISE, PERFORM, LOOP, EXIT
 ```
 
-Each category also accepts an exceptions list — words that keep their specific casing regardless of the surrounding rule:
+Each category also accepts an exceptions list — words that keep their specific casing regardless of the surrounding rule:
 
 ```yaml
 columns:
@@ -259,7 +259,7 @@ Note that `timestamp with time zone` was shortened to `timestamptz` according t
 
 ### PL/pgSQL — inside function bodies
 
-One of the hardest areas of SQL formatting is PL/pgSQL. Most tools either don’t process the function body inside `$$` at all, or process it incorrectly.
+One of the hardest areas of SQL formatting is PL/pgSQL. Most tools either don’t process the function body inside `$$` at all, or process it incorrectly.
 
 pg_procrustes recursively formats dollar-quoted function bodies:
 
@@ -314,7 +314,7 @@ pg_procrustes --diff query.sql
 
 ### CI/CD
 
-The simplest way to maintain consistent formatting in a team is to add a check to your CI pipeline:
+The simplest way to maintain consistent formatting in a team is to add a check to your CI pipeline:
 
 ```yaml
 # GitHub Actions
@@ -337,13 +337,13 @@ repos:
 
 ## 6. Ambition: To Be the gofmt of PostgreSQL
 
-Looking at the success of `gofmt`, `rustfmt`, or `prettier`, we see a common pattern:
+Looking at the success of `gofmt`, `rustfmt`, or `prettier`, we see a common pattern:
 
 1. **A single tool the community trusts.**
 2. **Configurable enough to cover 99 % of needs.**
 3. **Firm enough to eliminate endless formatting debates in code review.**
 
-pg_procrustes aspires to be that tool for the PostgreSQL ecosystem. Using the native `libpg_query` parser is its key advantage — if the formatter understands your code the same way the database does, an entire class of errors disappears where a formatter “tweaks” something and changes the query’s meaning.
+pg_procrustes aspires to be that tool for the PostgreSQL ecosystem. Using the native `libpg_query` parser is its key advantage — if the formatter understands your code the same way the database does, an entire class of errors disappears where a formatter “tweaks” something and changes the query’s meaning.
 
 The tool is currently in active development. Feedback from real users is what will determine its direction. If SQL formatting frustrates you, give it a try and let us know what’s missing or what could work differently.
 
@@ -355,6 +355,6 @@ Automatic SQL formatting is harder than for most programming languages. SQL is 
 
 But it’s not impossible. By approaching the problem with respect for PostgreSQL’s actual grammar (instead of regular expressions or custom parsers), a path opens to a tool that can unify SQL formatting across teams, projects, and companies.
 
-pg_procrustes is not another attempt at a SQL formatter. It’s an attempt to do it right.
+pg_procrustes is not another attempt at a SQL formatter. It’s an attempt to do it right.
 
 More at [pg_procrustes.80.cz](https://pg_procrustes.80.cz) and [GitHub](https://github.com/heptau/pg_procrustes).

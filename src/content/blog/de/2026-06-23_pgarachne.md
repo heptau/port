@@ -9,7 +9,7 @@ draft: false
 translation_id: "2026-06-23_1"
 ---
 
-Im Software-Engineering gibt es eine langfristige Tendenz zur Schichtung von Abstraktionen. Wenn wir heute eine gewöhnliche Webanwendung bauen, umfasst der typische Technologie-Stack eine relationale Datenbank, eine ORM-Schicht (Object-Relational Mapping), ein Backend-Framework (Node.js, Python, Go,. NET), Validierungsbibliotheken, JSON-Serialisierer und erst am Ende einen HTTP-Server, der diese Daten ins Netzwerk exponiert.
+Im Software-Engineering gibt es eine langfristige Tendenz zur Schichtung von Abstraktionen. Wenn wir heute eine gewöhnliche Webanwendung bauen, umfasst der typische Technologie-Stack eine relationale Datenbank, eine ORM-Schicht (Object-Relational Mapping), ein Backend-Framework (Node.js, Python, Go, .NET), Validierungsbibliotheken, JSON-Serialisierer und erst am Ende einen HTTP-Server, der diese Daten ins Netzwerk exponiert.
 
 Im Ergebnis verbringen Backend-Entwickler enorme Mengen an Zeit mit dem Schreiben von sogenanntem „Boilerplate"-Code – dem mechanischen Übersetzen von Datenbankstrukturen in HTTP-Routen und dem Validieren von Dingen, die auf Datenbankebene oft bereits validiert sind.
 

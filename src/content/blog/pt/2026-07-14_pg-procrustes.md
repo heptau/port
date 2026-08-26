@@ -9,7 +9,7 @@ draft: false
 translation_id: "2026-07-14_1"
 ---
 
-No desenvolvimento de software moderno, a formatação automática de código é algo natural. Go tem `gofmt` integrado diretamente em seu toolchain — ninguém discute sobre indentação ou posicionamento de chaves porque a máquina decidiu por todos. Rust tem `rustfmt`, Python tem `black` (inflexível, sem opções — e isso é bom), e o ecossistema JavaScript se unificou em torno do `prettier`.
+No desenvolvimento de software moderno, a formatação automática de código é algo natural. Go tem `gofmt` integrado diretamente em seu toolchain — ninguém discute sobre indentação ou posicionamento de chaves porque a máquina decidiu por todos. Rust tem `rustfmt`, Python tem `black` (inflexível, sem opções — e isso é bom), e o ecossistema JavaScript se unificou em torno do `prettier`.
 
 E aí tem **SQL**.
 
@@ -69,7 +69,7 @@ CREATE TABLE public.orders (
 
 Como formatar isso? Cada um tem uma opinião diferente. Alguns querem constraints indentadas abaixo das colunas, outros no mesmo nível. Alguns querem parâmetros de armazenamento em uma linha separada, outros preferem no final do cabeçalho.
 
-Nenhum formatador baseado em expressões regulares consegue lidar com isso de forma confiável — você precisa de um **parser real** que entenda o que é uma coluna, o que é uma constraint e o que é um parâmetro de armazenamento.
+Nenhum formatador baseado em expressões regulares consegue lidar com isso de forma confiável — você precisa de um **parser real** que entenda o que é uma coluna, o que é uma constraint e o que é um parâmetro de armazenamento.
 
 ---
 
