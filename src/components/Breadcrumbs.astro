@@ -2,11 +2,13 @@
 export interface Props {
   locale: string;
   category?: string;
+  categorySlug?: string;
   tag?: string;
   title?: string;
 }
 
-const { locale, category, tag, title } = Astro.props;
+const { locale, category, categorySlug, tag, title } = Astro.props;
+const catSlug = categorySlug ?? category;
 
 const homeHref = locale === 'en' ? '/' : `/${locale}`;
 
@@ -25,7 +27,7 @@ const t = labels[locale] ?? labels.en;
   <ol>
     <li><a href={homeHref}>{t.home}</a></li>
     {category && (
-      <li><a href={locale === 'en' ? `/${category}` : `/${locale}/${category}`}>{category}</a></li>
+      <li><a href={locale === 'en' ? `/${catSlug}` : `/${locale}/${catSlug}`}>{category}</a></li>
     )}
     {tag && <li><a href={locale === 'en' ? `/tag/${tag}` : `/${locale}/tag/${tag}`}>{t.tag}: {tag}</a></li>}
     {title && <li aria-current="page">{title}</li>}

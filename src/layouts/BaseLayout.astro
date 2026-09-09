@@ -30,6 +30,30 @@ const NAV_TOOLTIPS: Record<string, { home: string; categories: string; theme: st
 	pt: { home: 'Início', categories: 'Categorias', theme: 'Aparência',    language: 'Idioma'   },
 };
 const tt = NAV_TOOLTIPS[locale] ?? NAV_TOOLTIPS.en;
+
+const FOOTER_LABELS: Record<string, { by: string; aiNote: string }> = {
+	en: {
+		by: 'Written by',
+		aiNote: 'AI tools helped along the way — research, drafting, proofreading, and translation into the other languages — but every post reflects what the author actually meant to say.',
+	},
+	cs: {
+		by: 'Autor:',
+		aiNote: 'Při přípravě podkladů, psaní, korektuře i překladech do dalších jazyků pomáhaly nástroje AI — výsledek ale vždy odpovídá tomu, co chtěl autor říct.',
+	},
+	es: {
+		by: 'Autor:',
+		aiNote: 'Las herramientas de IA ayudaron por el camino — investigación, redacción, corrección y traducción a los demás idiomas — pero cada artículo refleja lo que el autor realmente quiso decir.',
+	},
+	de: {
+		by: 'Autor:',
+		aiNote: 'KI-Tools haben unterwegs geholfen — bei der Recherche, dem Schreiben, dem Korrekturlesen und der Übersetzung in die anderen Sprachen — das Ergebnis entspricht aber immer dem, was der Autor sagen wollte.',
+	},
+	pt: {
+		by: 'Autor:',
+		aiNote: 'Ferramentas de IA ajudaram pelo caminho — pesquisa, redação, revisão e tradução para os outros idiomas — mas cada artigo reflete o que o autor realmente quis dizer.',
+	},
+};
+const ft = FOOTER_LABELS[locale] ?? FOOTER_LABELS.en;
 ---
 
 <!doctype html>
@@ -96,7 +120,8 @@ const tt = NAV_TOOLTIPS[locale] ?? NAV_TOOLTIPS.en;
 					</button>
 					<div class="dropdown-menu cat-menu">
 						<a class="dropdown-option" href={locale === 'en' ? '/PostgreSQL' : `/${locale}/PostgreSQL`}>PostgreSQL</a>
-						<a class="dropdown-option" href={locale === 'en' ? '/AI' : `/${locale}/AI`}>AI</a>
+						<a class="dropdown-option" href={locale === 'en' ? '/AI' : `/${locale}/AI`}>AI / LLM</a>
+						<a class="dropdown-option" href={locale === 'en' ? '/software-engineering' : `/${locale}/software-engineering`}>Software Engineering</a>
 					</div>
 				</div>
 				<div class="nav-spacer"></div>
@@ -136,6 +161,10 @@ const tt = NAV_TOOLTIPS[locale] ?? NAV_TOOLTIPS.en;
 		<main>
 			<slot />
 		</main>
+		<footer>
+			<p class="footer-author">{ft.by} <a href="https://www.80.cz">Zbyněk Vanžura</a></p>
+			<p class="footer-ai-note">{ft.aiNote}</p>
+		</footer>
 		<script>
 			(function() {
 				var els = document.querySelectorAll('[data-publish-date]');

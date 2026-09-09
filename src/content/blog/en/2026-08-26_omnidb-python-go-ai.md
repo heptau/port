@@ -2,7 +2,7 @@
 title: "The End of the Python Era? How AI Helped Me Rewrite a 10-Year-Old Tool in Go"
 description: "Rewriting OmniDB from Python to Go as a case study — why in the AI era it no longer makes sense to sacrifice runtime performance for the sake of convenient coding."
 locale: "en"
-categories: ["AI", "PostgreSQL"]
+categories: ["AI", "PostgreSQL", "Software Engineering"]
 date: 2026-08-26
 tags: ["OmniDB", "Python", "Go", "AI", "PostgreSQL", "Rust", "software rewrite"]
 draft: false

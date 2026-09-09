@@ -6,19 +6,19 @@ import PrevNext from '../../components/PrevNext.astro';
 import PostList from '../../components/PostList.astro';
 import { getCollection } from 'astro:content';
 import { isPublished } from '../../utils/published';
+import { CATEGORIES, categorySlug, categoryDisplay } from '../../utils/categories';
 
 const LOCALES = ['en', 'cs', 'es', 'de', 'pt'] as const;
 
 export async function getStaticPaths() {
-	const ALL_CATEGORIES = ['AI', 'PostgreSQL'];
 	const locales = ['cs', 'es', 'de', 'pt'];
 	const allPages: { params: { locale: string; path?: string }; props: Record<string, unknown> }[] = [];
 
 	for (const locale of locales) {
 		const posts = await getCollection('blog', ({ data }) => data.locale === locale && isPublished(data));
 
-		for (const category of ALL_CATEGORIES) {
-			allPages.push({ params: { locale, path: category }, props: { pageType: 'category', category, locale } });
+		for (const category of CATEGORIES) {
+			allPages.push({ params: { locale, path: categorySlug(category) }, props: { pageType: 'category', category, locale } });
 		}
 
 		for (const post of posts) {
@@ -47,7 +47,8 @@ const langPaths: Record<string, string> = { en: '/', cs: '/cs', es: '/es', de: '
 let currentPost: (typeof allPosts)[number] | undefined;
 
 if (pageType === 'category') {
-	for (const l of LOCALES) langPaths[l] = localePath(l, category as string);
+	const catSlug = categorySlug(category as string);
+	for (const l of LOCALES) langPaths[l] = localePath(l, catSlug);
 } else if (pageType === 'post') {
 	currentPost = allPosts.find(p => p.id === slug);
 	if (currentPost) {
@@ -75,16 +76,16 @@ const canonical = pageType === 'post' && currentPost?.data.canonical;
 
 {pageType === 'post' && currentPost && (
 	<BaseLayout title={currentPost.data.title} description={currentPost.data.description} locale={locale as string} canonical={canonical} {...langProps}>
-		<Breadcrumbs locale={locale} category={currentPost.data.categories[0]} title={currentPost.data.title} />
+		<Breadcrumbs locale={locale} category={categoryDisplay(currentPost.data.categories[0])} categorySlug={categorySlug(currentPost.data.categories[0])} title={currentPost.data.title} />
 		<BlogPost post={currentPost} />
 		<PrevNext posts={allPosts} current={currentPost} locale={locale} />
 	</BaseLayout>
 )}
 
 {pageType === 'category' && (
-	<BaseLayout title={`Category: ${category}`} description={`Posts about ${category} in ${locale}`} locale={locale as string} {...langProps}>
-		<Breadcrumbs locale={locale} category={category as string} />
-		<h1>{LABELS[locale as string] ?? 'Category'}: {category as string}</h1>
+	<BaseLayout title={`Category: ${categoryDisplay(category as string)}`} description={`Posts about ${categoryDisplay(category as string)} in ${locale}`} locale={locale as string} {...langProps}>
+		<Breadcrumbs locale={locale} category={categoryDisplay(category as string)} categorySlug={categorySlug(category as string)} />
+		<h1>{LABELS[locale as string] ?? 'Category'}: {categoryDisplay(category as string)}</h1>
 		<PostList posts={allPosts.filter(p => p.data.categories.includes(category as string))} />
 	</BaseLayout>
 )}

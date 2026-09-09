@@ -13,4 +13,5 @@ posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 	<p>Zbyněk Vanžura's blog — practical insights from more than 20 years of experience, mostly about PostgreSQL, software development, and AI, but occasionally also about other topics worth reflecting on.</p>
 	<h2>Latest posts</h2>
 	<PostList posts={posts.slice(0, 5)} />
+	{posts.length > 5 && <p class="more-link"><a href="/archive">See all posts →</a></p>}
 </BaseLayout>

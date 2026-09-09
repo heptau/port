@@ -2,7 +2,7 @@
 title: "Das Ende der Python-Ära? Wie mir KI half, ein 10 Jahre altes Tool in Go neu zu schreiben"
 description: "Die Neuentwicklung von OmniDB von Python zu Go als Fallstudie — warum es im KI-Zeitalter keinen Sinn mehr ergibt, Laufzeitleistung auf dem Altar bequemer Programmierung zu opfern."
 locale: "de"
-categories: ["AI", "PostgreSQL"]
+categories: ["AI", "PostgreSQL", "Software Engineering"]
 date: 2026-08-26
 tags: ["OmniDB", "Python", "Go", "AI", "PostgreSQL", "Rust", "Software-Neuentwicklung"]
 draft: false

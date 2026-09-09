@@ -14,11 +14,11 @@ const { locale } = Astro.params as { locale: string };
 const posts = await getCollection('blog', ({ data }) => data.locale === locale && isPublished(data));
 posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-const labels: Record<string, { home: string; blog: string; latest: string; desc: string }> = {
-	cs: { home: 'Domů', blog: 'Blog', latest: 'Nejnovější příspěvky', desc: 'Blog Zbyňka Vanžury s praktickými postřehy z více než 20 let zkušeností — především o PostgreSQL, vývoji softwaru a AI, ale občas i o dalších tématech, která stojí za zamyšlení.' },
-	es: { home: 'Inicio', blog: 'Blog', latest: 'Últimos artículos', desc: 'El blog de Zbyněk Vanžura — ideas prácticas de más de 20 años de experiencia, principalmente sobre PostgreSQL, desarrollo de software e IA, pero también de vez en cuando sobre otros temas que merecen reflexión.' },
-	de: { home: 'Start', blog: 'Blog', latest: 'Neueste Beiträge', desc: 'Zbyněk Vanžuras Blog — praktische Einblicke aus mehr als 20 Jahren Erfahrung, hauptsächlich über PostgreSQL, Softwareentwicklung und KI, aber gelegentlich auch über andere Themen, die zum Nachdenken anregen.' },
-	pt: { home: 'Início', blog: 'Blog', latest: 'Artigos recentes', desc: 'O blog de Zbyněk Vanžura — insights práticos de mais de 20 anos de experiência, principalmente sobre PostgreSQL, desenvolvimento de software e IA, mas ocasionalmente também sobre outros temas que merecem reflexão.' },
+const labels: Record<string, { home: string; blog: string; latest: string; desc: string; more: string }> = {
+	cs: { home: 'Domů', blog: 'Blog', latest: 'Nejnovější příspěvky', desc: 'Blog Zbyňka Vanžury s praktickými postřehy z více než 20 let zkušeností — především o PostgreSQL, vývoji softwaru a AI, ale občas i o dalších tématech, která stojí za zamyšlení.', more: 'Zobrazit všechny příspěvky →' },
+	es: { home: 'Inicio', blog: 'Blog', latest: 'Últimos artículos', desc: 'El blog de Zbyněk Vanžura — ideas prácticas de más de 20 años de experiencia, principalmente sobre PostgreSQL, desarrollo de software e IA, pero también de vez en cuando sobre otros temas que merecen reflexión.', more: 'Ver todos los artículos →' },
+	de: { home: 'Start', blog: 'Blog', latest: 'Neueste Beiträge', desc: 'Zbyněk Vanžuras Blog — praktische Einblicke aus mehr als 20 Jahren Erfahrung, hauptsächlich über PostgreSQL, Softwareentwicklung und KI, aber gelegentlich auch über andere Themen, die zum Nachdenken anregen.', more: 'Alle Beiträge anzeigen →' },
+	pt: { home: 'Início', blog: 'Blog', latest: 'Artigos recentes', desc: 'O blog de Zbyněk Vanžura — insights práticos de mais de 20 anos de experiência, principalmente sobre PostgreSQL, desenvolvimento de software e IA, mas ocasionalmente também sobre outros temas que merecem reflexão.', more: 'Ver todos os artigos →' },
 };
 
 const t = labels[locale] ?? labels.cs;
@@ -29,4 +29,5 @@ const t = labels[locale] ?? labels.cs;
 	<p>{t.desc}</p>
 	<h2>{t.latest}</h2>
 	<PostList posts={posts.slice(0, 5)} />
+	{posts.length > 5 && <p class="more-link"><a href={`/${locale}/archive`}>{t.more}</a></p>}
 </BaseLayout>

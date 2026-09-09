@@ -2,7 +2,7 @@
 title: "¿El fin de la era de Python? Cómo la IA me ayudó a reescribir en Go una herramienta de 10 años"
 description: "Reescribir OmniDB de Python a Go como caso de estudio — por qué en la era de la IA ya no tiene sentido sacrificar el rendimiento en tiempo de ejecución en el altar de la comodidad al programar."
 locale: "es"
-categories: ["AI", "PostgreSQL"]
+categories: ["AI", "PostgreSQL", "Software Engineering"]
 date: 2026-08-26
 tags: ["OmniDB", "Python", "Go", "AI", "PostgreSQL", "Rust", "reescritura de software"]
 draft: false

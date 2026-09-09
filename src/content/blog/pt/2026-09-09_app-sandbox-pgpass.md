@@ -2,7 +2,7 @@
 title: "Aplicações em sandbox: quando o isolamento corta a base de dados do .pgpass"
 description: "Como levei o OmniDB para o sandbox do macOS e esbarrei num ficheiro .pgpass inacessível — e como deve ser uma concessão de permissões a pedido segura no macOS, Linux e Windows."
 locale: "pt"
-categories: ["PostgreSQL"]
+categories: ["PostgreSQL", "Software Engineering"]
 date: 2026-09-09
 tags: ["sandbox", "macOS", "Linux", "Windows", "segurança", "PostgreSQL", "OmniDB", "Flatpak", "MSIX"]
 draft: false

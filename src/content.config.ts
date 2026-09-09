@@ -8,7 +8,7 @@ export const collections = {
       title: z.string(),
       description: z.string(),
       locale: z.enum(['en', 'cs', 'es', 'de', 'pt']),
-      categories: z.array(z.enum(['AI', 'PostgreSQL'])),
+      categories: z.array(z.enum(['AI', 'PostgreSQL', 'Software Engineering'])),
       date: z.date(),
       tags: z.array(z.string()).optional(),
       draft: z.boolean().optional().default(false),

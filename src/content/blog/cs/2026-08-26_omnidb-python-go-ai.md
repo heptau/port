@@ -2,7 +2,7 @@
 title: "Konec věku Pythonu? Jak mi AI pomohla přepsat 10 let starý nástroj do Go"
 description: "Přepis OmniDB z Pythonu do Go jako případová studie — proč v éře AI přestává dávat smysl obětovat runtime výkon na oltář pohodlného psaní kódu."
 locale: "cs"
-categories: ["AI", "PostgreSQL"]
+categories: ["AI", "PostgreSQL", "Software Engineering"]
 date: 2026-08-26
 tags: ["OmniDB", "Python", "Go", "AI", "PostgreSQL", "Rust", "přepis softwaru"]
 draft: false
