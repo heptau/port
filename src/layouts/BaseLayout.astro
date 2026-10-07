@@ -7,6 +7,7 @@ export interface Props {
 	description?: string;
 	locale?: string;
 	canonical?: string;
+	image?: string;
 	enPath?: string;
 	csPath?: string;
 	esPath?: string;
@@ -14,7 +15,7 @@ export interface Props {
 	ptPath?: string;
 }
 
-const { title, description, locale = 'en', canonical, enPath, csPath, esPath, dePath, ptPath } = Astro.props;
+const { title, description, locale = 'en', canonical, image, enPath, csPath, esPath, dePath, ptPath } = Astro.props;
 
 const allLocales = ['en', 'cs', 'es', 'de', 'pt'] as const;
 const langPaths: Record<string, string | undefined> = { en: enPath, cs: csPath, es: esPath, de: dePath, pt: ptPath };
@@ -34,23 +35,23 @@ const tt = NAV_TOOLTIPS[locale] ?? NAV_TOOLTIPS.en;
 const FOOTER_LABELS: Record<string, { by: string; aiNote: string }> = {
 	en: {
 		by: 'Written by',
-		aiNote: 'AI tools helped along the way — research, drafting, proofreading, and translation into the other languages — but every post reflects what the author actually meant to say.',
+		aiNote: 'AI tools helped along the way — research, drafting, proofreading, and translation into the other languages — but the topic, the experience and the final word are mine.',
 	},
 	cs: {
 		by: 'Autor:',
-		aiNote: 'Při přípravě podkladů, psaní, korektuře i překladech do dalších jazyků pomáhaly nástroje AI — výsledek ale vždy odpovídá tomu, co chtěl autor říct.',
+		aiNote: 'Při přípravě podkladů, psaní, korektuře i překladech do dalších jazyků pomáhaly nástroje AI, ale námět, zkušenosti i konečné slovo jsou moje.',
 	},
 	es: {
 		by: 'Autor:',
-		aiNote: 'Las herramientas de IA ayudaron por el camino — investigación, redacción, corrección y traducción a los demás idiomas — pero cada artículo refleja lo que el autor realmente quiso decir.',
+		aiNote: 'Las herramientas de IA ayudaron por el camino — investigación, redacción, corrección y traducción a los demás idiomas — pero el tema, la experiencia y la última palabra son míos.',
 	},
 	de: {
 		by: 'Autor:',
-		aiNote: 'KI-Tools haben unterwegs geholfen — bei der Recherche, dem Schreiben, dem Korrekturlesen und der Übersetzung in die anderen Sprachen — das Ergebnis entspricht aber immer dem, was der Autor sagen wollte.',
+		aiNote: 'KI-Tools haben unterwegs geholfen — bei der Recherche, dem Schreiben, dem Korrekturlesen und der Übersetzung in die anderen Sprachen — aber das Thema, die Erfahrung und das letzte Wort sind meine.',
 	},
 	pt: {
 		by: 'Autor:',
-		aiNote: 'Ferramentas de IA ajudaram pelo caminho — pesquisa, redação, revisão e tradução para os outros idiomas — mas cada artigo reflete o que o autor realmente quis dizer.',
+		aiNote: 'Ferramentas de IA ajudaram pelo caminho — pesquisa, redação, revisão e tradução para os outros idiomas — mas o tema, a experiência e a última palavra são meus.',
 	},
 };
 const ft = FOOTER_LABELS[locale] ?? FOOTER_LABELS.en;
@@ -66,7 +67,7 @@ const ft = FOOTER_LABELS[locale] ?? FOOTER_LABELS.en;
 		<link rel="alternate" type="application/rss+xml" title="port.80.cz" href={locale === 'en' ? '/rss.xml' : `/${locale}/rss.xml`} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description ?? title} />
-		<meta property="og:image" content="https://port.80.cz/favicon.png" />
+		<meta property="og:image" content={new URL(image ?? '/favicon.png', 'https://port.80.cz').href} />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		{canonical && <link rel="canonical" href={canonical} />}
 		<title>{title}</title>

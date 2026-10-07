@@ -75,7 +75,7 @@ const canonical = pageType === 'post' && currentPost?.data.canonical;
 ---
 
 {pageType === 'post' && currentPost && (
-	<BaseLayout title={currentPost.data.title} description={currentPost.data.description} locale={locale as string} canonical={canonical} {...langProps}>
+	<BaseLayout title={currentPost.data.title} description={currentPost.data.description} image={currentPost.data.image} locale={locale as string} canonical={canonical} {...langProps}>
 		<Breadcrumbs locale={locale} category={categoryDisplay(currentPost.data.categories[0])} categorySlug={categorySlug(currentPost.data.categories[0])} title={currentPost.data.title} />
 		<BlogPost post={currentPost} />
 		<PrevNext posts={allPosts} current={currentPost} locale={locale} />

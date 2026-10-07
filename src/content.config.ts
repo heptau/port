@@ -13,6 +13,7 @@ export const collections = {
       tags: z.array(z.string()).optional(),
       draft: z.boolean().optional().default(false),
       canonical: z.string().url().optional(),
+      image: z.string().optional(),
       translation_id: z.string().optional(),
     }),
   }),
