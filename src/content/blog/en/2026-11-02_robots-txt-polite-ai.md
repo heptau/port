@@ -67,6 +67,10 @@ At that moment the AI isn’t any dumber. It’s just cut off from part of th
 
 A concrete example from Sledovna: for a bill on addictive substances I had to write in the article that the official sites of many countries (for example the American DEA or the Federal Register) block automated reading, and the European Union Drugs Agency (EUDA) explicitly forbids using its content for AI, so the situation in individual countries is documented only partially and from more general sources. That is exactly the tax. Not that the AI can’t search. But someone closed part of the world to it, and it has to admit that.
 
+Here is what such an admission looks like in practice. For a Senate bill that would make murder not subject to the statute of limitations, Sledovna had to add an update after publication: the previous version of the article had attributed specific objections to the government’s position that could not be verified from the available sources, so they were removed and the article says so openly. (The screenshot is in Czech.)
+
+![Sledovna.cz: an update to an article on a Senate bill, explaining that unverified objections attributed to the government were removed](/images/2026-11-02_sledovna.webp)
+
 ## 3. It’s not just robots.txt
 
 `robots.txt` is one layer. In reality the restrictions add up:

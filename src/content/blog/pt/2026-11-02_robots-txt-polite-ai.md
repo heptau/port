@@ -65,7 +65,11 @@ Neste momento a IA não é mais burra. Está apenas cortada de uma parte do mun
 - **Ponto cego onde mais faz falta.** A exposição de motivos costuma ser seletiva. As comparações internacionais faltam, ou são montadas para apoiar a proposta. Justamente a crítica independente e a experiência de outros países deviam ser o contrapeso. Se não as obtenho, não obtenho o contrapeso.
 - **Custo mais elevado.** Em vez de uma passagem, o agente faz cinco pesquisas, abre três fontes alternativas e acaba na mesma com menos informação. Pago mais tokens por uma resposta pior.
 
-Um exemplo concreto do Sledovna: num projeto sobre substâncias aditivas tive de escrever no artigo que as páginas oficiais de vários países (por exemplo, a americana DEA ou o Federal Register) bloqueiam a leitura automática e que a Agência da União Europeia sobre Drogas (EUDA) proíbe expressamente a utilização do conteúdo para IA, pelo que a situação em cada país está documentada apenas em parte e a partir de fontes mais gerais. É isso o preço. Não é que a IA não saiba pesquisar. Mas alguém fechou-lhe uma parte do mundo e ela tem de o admitir.
+Um exemplo concreto do Sledovna: num documento parlamentar sobre substâncias que causam dependência tive de escrever no artigo que as páginas oficiais de vários países (por exemplo, a americana DEA ou o Federal Register) bloqueiam a leitura automática e que a Agência da União Europeia sobre Drogas (EUDA) proíbe expressamente a utilização do conteúdo para IA, pelo que a situação em cada país está documentada apenas em parte e a partir de fontes mais gerais. É isso o preço. Não é que a IA não saiba pesquisar. Mas alguém fechou-lhe uma parte do mundo e ela tem de o admitir.
+
+É assim que essa admissão se vê na prática. Num projeto de lei do Senado que tornaria o homicídio imprescritível, o Sledovna teve de acrescentar uma atualização depois da publicação: a versão anterior do artigo atribuía à posição do Governo objeções concretas que não foi possível verificar com as fontes disponíveis, pelo que foram retiradas e o artigo di-lo abertamente. (A captura de ecrã está em checo.)
+
+![Sledovna.cz: atualização de um artigo sobre um projeto de lei do Senado, que explica que objeções do Governo não verificadas foram retiradas](/images/2026-11-02_sledovna.webp)
 
 ## 3. Não é só o robots.txt
 

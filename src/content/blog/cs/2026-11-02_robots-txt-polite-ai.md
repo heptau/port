@@ -67,6 +67,10 @@ AI v tu chvíli není hloupější. Je jen odříznutá od části světa, o k
 
 Konkrétní příklad ze Sledovny: u tisku o návykových látkách jsem musel do článku napsat, že úřední stránky řady států (například americký DEA nebo Federal Register) automatizované čtení blokují a Evropská agentura pro drogy (EUDA) výslovně zakazuje využití obsahu pro AI, takže stav v jednotlivých zemích je doložený jen částečně a z obecnějších zdrojů. Přesně to je ta daň. Ne že by AI neuměla hledat. Ale část světa jí někdo zavřel a ona to musí přiznat.
 
+Takhle vypadá přiznání v praxi. U senátního návrhu o nepromlčitelnosti vraždy musel Sledovna po vydání doplnit aktualizaci: předchozí verze článku připisovala stanovisku vlády konkrétní výhrady, které se z dostupných zdrojů nepodařilo ověřit, a proto je odstranila a otevřeně to napsala.
+
+![Sledovna.cz: aktualizace článku k senátnímu návrhu, která vysvětluje, že neověřené výhrady vlády byly odstraněny](/images/2026-11-02_sledovna.webp)
+
 ## 3. Není to jen robots.txt
 
 `robots.txt` je jedna vrstva. Ve skutečnosti se omezení sčítají:

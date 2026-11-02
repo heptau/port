@@ -67,6 +67,10 @@ Die KI ist in diesem Moment nicht dümmer. Sie ist nur von einem Teil der Welt a
 
 Ein konkretes Beispiel aus Sledovna: Bei einer Drucksache zu Suchtmitteln musste ich in den Artikel schreiben, dass die amtlichen Seiten mehrerer Staaten (etwa die US-amerikanische DEA oder das Federal Register) automatisiertes Lesen blockieren und die Europäische Drogenagentur (EUDA) die Nutzung ihrer Inhalte für KI ausdrücklich untersagt, sodass die Lage in den einzelnen Ländern nur teilweise und aus allgemeineren Quellen belegt ist. Genau das ist der Preis. Nicht, dass die KI nicht suchen könnte. Aber jemand hat ihr einen Teil der Welt verschlossen, und sie muss es zugeben.
 
+So sieht ein solches Eingeständnis in der Praxis aus. Bei einem Gesetzentwurf des Senats, der Mord unverjährbar machen würde, musste Sledovna nach der Veröffentlichung ein Update ergänzen: Die frühere Fassung des Artikels hatte der Stellungnahme der Regierung konkrete Einwände zugeschrieben, die sich anhand der verfügbaren Quellen nicht überprüfen ließen. Sie wurden deshalb entfernt, und der Artikel sagt das offen. (Der Screenshot ist auf Tschechisch.)
+
+![Sledovna.cz: Aktualisierung eines Artikels zu einem Senatsentwurf, die erklärt, dass nicht überprüfte Einwände der Regierung entfernt wurden](/images/2026-11-02_sledovna.webp)
+
 ## 3. Es geht nicht nur um robots.txt
 
 `robots.txt` ist eine Schicht. In Wirklichkeit addieren sich die Einschränkungen:

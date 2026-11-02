@@ -65,7 +65,11 @@ En ese momento la IA no es más tonta. Simplemente está aislada de una parte de
 - **Un punto ciego donde más hace falta.** La exposición de motivos suele ser selectiva. La comparación internacional falta en ella, o está armada de manera que respalde la propuesta. Precisamente la crítica independiente y la experiencia de otros países deberían servir de contrapeso. Si no las obtengo, tampoco obtengo ese contrapeso.
 - **Mayor coste.** En lugar de una sola pasada, el agente hace cinco búsquedas, abre tres fuentes sustitutas y aun así acaba con menos información. Pago más tokens por una respuesta peor.
 
-Un ejemplo concreto de Sledovna: en un proyecto sobre sustancias adictivas tuve que escribir en el artículo que las páginas oficiales de varios países (por ejemplo, la DEA estadounidense o el Federal Register) bloquean la lectura automatizada y que la Agencia de la Unión Europea sobre Drogas (EUDA) prohíbe expresamente el uso de su contenido para IA, de modo que la situación en cada país está documentada solo parcialmente y a partir de fuentes más generales. Ese es el precio. No es que la IA no sepa buscar. Es que alguien le ha cerrado una parte del mundo y ella tiene que reconocerlo.
+Un ejemplo concreto de Sledovna: en un documento parlamentario sobre sustancias adictivas tuve que escribir en el artículo que las páginas oficiales de varios países (por ejemplo, la DEA estadounidense o el Federal Register) bloquean la lectura automatizada y que la Agencia de la Unión Europea sobre Drogas (EUDA) prohíbe expresamente el uso de su contenido para IA, de modo que la situación en cada país está documentada solo parcialmente y a partir de fuentes más generales. Ese es el precio. No es que la IA no sepa buscar. Es que alguien le ha cerrado una parte del mundo y ella tiene que reconocerlo.
+
+Así se ve esa admisión en la práctica. En un proyecto de ley del Senado que haría imprescriptible el asesinato, Sledovna tuvo que añadir una actualización tras la publicación: la versión anterior del artículo atribuía a la postura del Gobierno objeciones concretas que no pudieron verificarse con las fuentes disponibles, así que se eliminaron y el artículo lo dice abiertamente. (La captura está en checo.)
+
+![Sledovna.cz: actualización de un artículo sobre un proyecto de ley del Senado, que explica que se eliminaron objeciones del Gobierno no verificadas](/images/2026-11-02_sledovna.webp)
 
 ## 3. No es solo robots.txt
 
