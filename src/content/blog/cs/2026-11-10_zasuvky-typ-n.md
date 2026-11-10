@@ -2,7 +2,7 @@
 title: "Evropa sjednotila napětí, ale ne zásuvky. Šlo by to napravit, aniž by kdokoli musel vyměnit jedinou"
 description: "Typ N (IEC 60906-1) je bezpečnější, menší a mezinárodně standardizovaný. Evropa ho nemusí nařizovat. Stačilo by ho povolit a nechat trh, aby se postupně sjednotil sám."
 locale: "cs"
-categories: ["Software Engineering"]
+categories: ["Standards & Society"]
 date: 2026-11-10
 tags: ["zásuvky", "typ N", "IEC 60906-1", "230 V", "EU", "bezpečnost", "standardizace", "jednotný trh"]
 draft: false

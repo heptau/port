@@ -2,7 +2,7 @@
 title: "Europa unificó la tensión, pero no las tomas de corriente. Se podría arreglar sin que nadie tenga que cambiar ni una sola"
 description: "El tipo N (IEC 60906-1) es más seguro, más pequeño y está normalizado internacionalmente. Europa no tiene por qué imponerlo. Bastaría con permitirlo y dejar que el mercado se unifique poco a poco por sí solo."
 locale: "es"
-categories: ["Software Engineering"]
+categories: ["Standards & Society"]
 date: 2026-11-10
 tags: ["tomas de corriente", "tipo N", "IEC 60906-1", "230 V", "EU", "seguridad", "normalización", "mercado único"]
 draft: false

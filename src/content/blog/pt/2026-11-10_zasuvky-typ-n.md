@@ -2,7 +2,7 @@
 title: "A Europa uniformizou a tensão, mas não as tomadas. Seria possível corrigi-lo sem que ninguém tivesse de trocar uma única"
 description: "O tipo N (IEC 60906-1) é mais seguro, mais pequeno e internacionalmente normalizado. A Europa não precisa de o impor. Bastaria permiti-lo e deixar que o mercado se uniformize sozinho, aos poucos."
 locale: "pt"
-categories: ["Software Engineering"]
+categories: ["Standards & Society"]
 date: 2026-11-10
 tags: ["tomadas", "tipo N", "IEC 60906-1", "230 V", "EU", "segurança", "normalização", "mercado único"]
 draft: false

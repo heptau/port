@@ -2,7 +2,7 @@
 title: "Europe Unified the Voltage, but Not the Sockets. It Could Be Fixed Without Anyone Replacing a Single One"
 description: "Type N (IEC 60906-1) is safer, smaller and internationally standardized. Europe doesn’t have to mandate it. It would be enough to allow it and let the market converge gradually on its own."
 locale: "en"
-categories: ["Software Engineering"]
+categories: ["Standards & Society"]
 date: 2026-11-10
 tags: ["sockets", "type N", "IEC 60906-1", "230 V", "EU", "safety", "standardization", "single market"]
 draft: false

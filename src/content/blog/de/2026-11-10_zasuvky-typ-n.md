@@ -2,7 +2,7 @@
 title: "Europa hat die Spannung vereinheitlicht, aber nicht die Steckdosen. Ließe sich das beheben, ohne dass jemand auch nur eine einzige austauschen muss?"
 description: "Typ N (IEC 60906-1) ist sicherer, kleiner und international genormt. Europa muss ihn nicht vorschreiben. Es würde genügen, ihn zuzulassen und den Markt sich nach und nach selbst vereinheitlichen zu lassen."
 locale: "de"
-categories: ["Software Engineering"]
+categories: ["Standards & Society"]
 date: 2026-11-10
 tags: ["Steckdosen", "Typ N", "IEC 60906-1", "230 V", "EU", "Sicherheit", "Standardisierung", "Binnenmarkt"]
 draft: false

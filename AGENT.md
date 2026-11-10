@@ -17,7 +17,7 @@ Articles in `src/content/blog/{locale}/` — flat (no category subdirs).
 
 ## Collection Schema
 Defined in `src/content.config.ts`. Frontmatter:
-- `title`, `description`, `locale` (en|cs|es|de|pt), `categories` (AI|PostgreSQL), `date`
+- `title`, `description`, `locale` (en|cs|es|de|pt), `categories` (AI|PostgreSQL|Software Engineering|Standards & Society), `date`
 - `translation_id` links translations across locales
 - Optional: `tags`, `draft`
 
