@@ -11,7 +11,7 @@ translation_id: "2026-11-10_1"
 
 La tensión en la toma de corriente es la misma en toda Europa desde el cambio de milenio: 230 V, 50 Hz. Pero en cuanto cruzas una frontera, a menudo necesitas un adaptador. La Unión sabe unificar los cargadores de móvil, pero las tomas de corriente a las que se enchufan esos cargadores se quedaron como las inventó cada Estado por separado hace cien años.
 
-![Resumen de las tomas de corriente y clavijas usadas en Europa y en el mundo, con las patillas a la misma escala; las líneas discontinuas son dimensiones sin verificar](/images/2026-11-10_zasuvky-prehled.svg)
+![Resumen de las tomas de corriente y clavijas usadas en Europa y en el mundo, con las patillas a la misma escala; tipos por orden alfabético, con códigos de países de uso](/images/2026-11-10_zasuvky-prehled.svg)
 
 Intenté averiguar por qué. Y descubrí dos cosas. Primero, existe una norma internacional diseñada precisamente como toma común para las regiones con 230 V. Segundo: Europa ya ha considerado seriamente en varias ocasiones unificar las tomas de corriente, y cada vez fracasó por una sola razón: **el coste de obligar a sustituirlas**. Hoy creo que existe un camino que no necesita sustituir nada.
 

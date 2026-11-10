@@ -11,7 +11,7 @@ translation_id: "2026-11-10_1"
 
 A tensão na tomada é a mesma em toda a Europa desde a viragem do milénio: 230 V, 50 Hz. Só que, mal se passa a fronteira, muitas vezes é preciso um adaptador. A União sabe uniformizar os carregadores de telemóvel, mas as tomadas onde esses carregadores se ligam ficaram como cada Estado as inventou, há cem anos, cada um por si.
 
-![Panorama das tomadas e fichas usadas na Europa e no mundo, com os pinos à mesma escala; as linhas tracejadas indicam dimensões não verificadas](/images/2026-11-10_zasuvky-prehled.svg)
+![Panorama das tomadas e fichas usadas na Europa e no mundo, com os pinos à mesma escala; tipos por ordem alfabética, com códigos dos países de uso](/images/2026-11-10_zasuvky-prehled.svg)
 
 Tentei perceber porquê. E descobri duas coisas. Primeiro, existe uma norma internacional concebida precisamente como tomada comum para as regiões com 230 V. Segundo: a Europa já ponderou seriamente, várias vezes, uniformizar as tomadas, e de cada vez a ideia naufragou por uma única razão, **o custo da substituição forçada**. Hoje penso que existe um caminho que não precisa de substituição nenhuma.
 

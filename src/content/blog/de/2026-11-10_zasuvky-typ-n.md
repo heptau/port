@@ -11,7 +11,7 @@ translation_id: "2026-11-10_1"
 
 Die Spannung in der Steckdose ist in ganz Europa seit der Jahrtausendwende gleich: 230 V, 50 Hz. Sobald Sie aber eine Grenze überqueren, brauchen Sie oft einen Adapter. Die Union schafft es, die Ladegeräte für Mobiltelefone zu vereinheitlichen, aber die Steckdosen, in die diese Ladegeräte gesteckt werden, sind so geblieben, wie sie vor hundert Jahren jeder Staat für sich erdacht hat.
 
-![Übersicht der in Europa und weltweit verwendeten Steckdosen und Stecker, Kontaktstifte im gleichen Maßstab; gestrichelt sind nicht überprüfte Maße](/images/2026-11-10_zasuvky-prehled.svg)
+![Übersicht der in Europa und weltweit verwendeten Steckdosen und Stecker, Kontaktstifte im gleichen Maßstab; Typen alphabetisch mit Ländercodes](/images/2026-11-10_zasuvky-prehled.svg)
 
 Ich habe versucht herauszufinden, warum. Dabei habe ich zwei Dinge festgestellt. Erstens gibt es eine internationale Norm, die genau als gemeinsame Steckdose für Gebiete mit 230 V entworfen wurde. Zweitens: Europa hat die Vereinheitlichung der Steckdosen schon mehrmals ernsthaft erwogen, und jedes Mal ist sie an einer einzigen Sache gescheitert — **an den Kosten des erzwungenen Austauschs**. Heute glaube ich, dass es einen Weg gibt, der gar keinen Austausch braucht.
 

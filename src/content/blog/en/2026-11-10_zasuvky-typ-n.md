@@ -11,7 +11,7 @@ translation_id: "2026-11-10_1"
 
 Since the turn of the millennium, the voltage at the wall has been the same across Europe: 230 V, 50 Hz. Yet as soon as you cross a border, you often need an adapter. The Union can unify mobile phone chargers, but the sockets those chargers plug into stayed the way each country invented them separately a hundred years ago.
 
-![Overview of sockets and plugs used in Europe and around the world, pins at the same scale; dashed outlines are unverified dimensions](/images/2026-11-10_zasuvky-prehled.svg)
+![Overview of sockets and plugs used in Europe and around the world, pins at the same scale; types in alphabetical order, with country codes](/images/2026-11-10_zasuvky-prehled.svg)
 
 I tried to find out why. And I found two things. First, there is an international standard that was designed precisely as a common socket for regions with 230 V. Second: Europe has seriously considered unifying sockets several times, and each time it foundered on a single thing — **the cost of forced replacement**. Today I think there is a path that needs no replacement at all.
 

@@ -11,7 +11,7 @@ translation_id: "2026-11-10_1"
 
 Napětí v zásuvce máme v celé Evropě od přelomu tisíciletí stejné: 230 V, 50 Hz. Jenže jakmile přejedete hranici, často potřebujete adaptér. Unie umí sjednotit nabíječky mobilů, ale zásuvky, do kterých se ty nabíječky zapojují, zůstaly tak, jak je před sto lety vymyslel každý stát zvlášť.
 
-![Přehled zásuvek a zástrček používaných v Evropě i ve světě, kolíky ve stejném měřítku; čárkované jsou neověřené rozměry](/images/2026-11-10_zasuvky-prehled.svg)
+![Přehled zásuvek a zástrček používaných v Evropě i ve světě, kolíky ve stejném měřítku; typy seřazené podle písmen, s kódy zemí použití](/images/2026-11-10_zasuvky-prehled.svg)
 
 Zkusil jsem zjistit, proč. A zjistil jsem dvě věci. Za prvé existuje mezinárodní norma, která byla navržena právě jako společná zásuvka pro oblasti s 230 V. Za druhé: Evropa o sjednocení zásuvek už několikrát vážně uvažovala a pokaždé to ztroskotalo na jediné věci — **na ceně nucené výměny**. Dnes si myslím, že existuje cesta, která žádnou výměnu nepotřebuje.
 

@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 366" font-family="sans-serif"><rect width="360" height="366" fill="#fff"/>
-<polygon points="120.6,99.0 239.4,99.0 286.5,146.1 286.5,153.9 239.4,201.0 120.6,201.0 73.5,153.9 73.5,146.1" fill="#eee" stroke="#555" stroke-width="2" stroke-linejoin="round"/>
-<circle cx="123.0" cy="150.0" r="13.5" fill="#222"/>
-<circle cx="237.0" cy="150.0" r="13.5" fill="#222"/>
-<circle cx="180.0" cy="168.0" r="13.5" fill="#2a7"/>
-<polygon points="131.1,90.0 228.9,90.0 285.0,146.1 285.0,153.9 228.9,210.0 131.1,210.0 75.0,153.9 75.0,146.1" fill="none" stroke="#c33" stroke-width="2.5" stroke-dasharray="6 4" stroke-linejoin="round"/>
-<circle cx="123.0" cy="150.0" r="12.0" fill="none" stroke="#c33" stroke-width="2.5" stroke-dasharray="5 3"/>
-<circle cx="237.0" cy="150.0" r="12.0" fill="none" stroke="#c33" stroke-width="2.5" stroke-dasharray="5 3"/>
-<circle cx="180.0" cy="180.0" r="12.0" fill="none" stroke="#c33" stroke-width="2.5" stroke-dasharray="5 3"/>
-<circle cx="21.599999999999998" cy="322" r="9" fill="#eee" stroke="#555" stroke-width="2"/>
-<text x="37.599999999999994" y="327" font-size="13" font-weight="bold">N · IEC 60906-1 · 35.5 × 17 mm · Ø 4.5 · PE +3 mm</text>
-<circle cx="21.599999999999998" cy="346" r="9" fill="none" stroke="#c33" stroke-width="2.5" stroke-dasharray="5 3"/>
-<text x="37.599999999999994" y="351" font-size="13" font-weight="bold">J · SN 441011 · 35.0 × 20 mm · Ø 4.0 · PE +5 mm</text></svg>
+<svg font-family="sans-serif" viewBox="0 0 360 366" xmlns="http://www.w3.org/2000/svg"><path d="m0 0h360v366h-360z" fill="#fff"/><path d="m120.6 99h118.8l47.1 47.1v7.8l-47.1 47.1h-118.8l-47.1-47.1v-7.8z" fill="#eee" stroke="#555" stroke-linejoin="round" stroke-width="2"/><circle cx="123" cy="150" fill="#222" r="13.5"/><circle cx="237" cy="150" fill="#222" r="13.5"/><circle cx="180" cy="168" fill="#2a7" r="13.5"/><g fill="none" stroke="#c33" stroke-width="2.5"><path d="m131.1 90h97.8l56.1 56.1v7.8l-56.1 56.1h-97.8l-56.1-56.1v-7.8z" stroke-dasharray="6 4" stroke-linejoin="round"/><circle cx="123" cy="150" r="12" stroke-dasharray="5 3"/><circle cx="237" cy="150" r="12" stroke-dasharray="5 3"/><circle cx="180" cy="180" r="12" stroke-dasharray="5 3"/></g><circle cx="21.6" cy="322" fill="#eee" r="9" stroke="#555" stroke-width="2"/><text font-size="13" font-weight="bold" x="37.6" y="327">N · IEC 60906-1 · 35.5 × 17 mm · Ø 4.5 · PE +3 mm</text><circle cx="21.6" cy="346" fill="none" r="9" stroke="#c33" stroke-dasharray="5 3" stroke-width="2.5"/><text font-size="13" font-weight="bold" x="37.6" y="351">J · SN 441011 · 35.0 × 20 mm · Ø 4.0 · PE +5 mm</text></svg>
