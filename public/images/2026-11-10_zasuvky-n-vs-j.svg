@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 366" font-family="sans-serif"><rect width="360" height="366" fill="#fff"/>
+<rect x="73.5" y="99.0" width="213.0" height="102" rx="34.0" fill="#eee" stroke="#555" stroke-width="2"/>
+<circle cx="123.0" cy="150.0" r="13.5" fill="#555" fill-opacity=".45" stroke="#222"/>
+<circle cx="237.0" cy="150.0" r="13.5" fill="#555" fill-opacity=".45" stroke="#222"/>
+<circle cx="180.0" cy="168.0" r="13.5" fill="#2a7" fill-opacity=".55" stroke="#222"/>
+<circle cx="123.0" cy="150.0" r="12.0" fill="none" stroke="#c33" stroke-width="2.5" stroke-dasharray="5 3"/>
+<circle cx="237.0" cy="150.0" r="12.0" fill="none" stroke="#c33" stroke-width="2.5" stroke-dasharray="5 3"/>
+<circle cx="180.0" cy="180.0" r="12.0" fill="none" stroke="#c33" stroke-width="2.5" stroke-dasharray="5 3"/>
+<circle cx="21.599999999999998" cy="322" r="9" fill="#555" fill-opacity=".45" stroke="#222"/>
+<text x="37.599999999999994" y="327" font-size="13" font-weight="bold">N · IEC 60906-1 · Ø 4.5 · PE +3 mm</text>
+<circle cx="21.599999999999998" cy="346" r="9" fill="none" stroke="#c33" stroke-width="2.5" stroke-dasharray="5 3"/>
+<text x="37.599999999999994" y="351" font-size="13" font-weight="bold">J · SN 441011 · Ø 4.0 · PE +5 mm</text></svg>
