@@ -21,6 +21,10 @@ Norma **IEC 60 906–1** (první vydání 1986, současné z roku 2009) popisu
 
 Je to zároveň malá zásuvka. Zástrčka typu N má plochu asi 4,6 cm², zatímco Schuko asi 10 cm². Dvě zásuvky N se prý vejdou na místo jedné Schuko nebo britské BS 1363.
 
+Nejlépe je to vidět na čele zástrčky: Europlug, typ N, jeho brazilská varianta i švýcarský typ J mají prakticky stejný plochý šestiúhelník o šířce asi 35 mm a liší se jen výškou (13,7 až 20 mm).
+
+![Čela zástrček Europlug, typu N, brazilské varianty a švýcarského typu J ve stejném měřítku: stejný plochý šestiúhelník, liší se jen výškou](/images/2026-11-10_zasuvky-tvary.svg)
+
 Typ N je velmi podobný švýcarskému typu J, který se ve Švýcarsku používá od padesátých let. Rozdíl je v detailech: J má kolíky Ø 4,0 mm, zem odsazenou o 5 mm a opačnou polaritu. Není to náhoda; typ N vznikl jako dotažení stejné myšlenky.
 
 ![Typ N (plné kolíky) a švýcarský typ J (červeně čárkovaně) přes sebe: stejná rozteč 19 mm, jiný průměr kolíků a odsazení zemního kolíku](/images/2026-11-10_zasuvky-n-vs-j.svg)

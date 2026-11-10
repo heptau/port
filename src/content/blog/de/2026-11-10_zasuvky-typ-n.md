@@ -21,6 +21,10 @@ Die Norm **IEC 60.906–1** (erste Ausgabe 1986, die aktuelle von 2009) beschrei
 
 Es ist zugleich eine kleine Steckdose. Der Stecker vom Typ N hat eine Fläche von etwa 4,6 cm², Schuko dagegen etwa 10 cm². Zwei N-Steckdosen sollen angeblich an die Stelle einer Schuko oder der britischen BS 1363 passen.
 
+Am besten sieht man das an der Stirnseite des Steckers: Europlug, Typ N, seine brasilianische Variante und der Schweizer Typ J haben praktisch dasselbe flache Sechseck von etwa 35 mm Breite und unterscheiden sich nur in der Höhe (13,7 bis 20 mm).
+
+![Stirnseiten der Stecker Europlug, Typ N, brasilianische Variante und Schweizer Typ J im gleichen Maßstab: dasselbe flache Sechseck, nur die Höhe unterscheidet sich](/images/2026-11-10_zasuvky-tvary.svg)
+
 Typ N ist dem Schweizer Typ J sehr ähnlich, der in der Schweiz seit den fünfziger Jahren verwendet wird. Der Unterschied liegt in den Details: J hat Kontaktstifte mit Ø 4,0 mm, die Erdung um 5 mm versetzt und die entgegengesetzte Polarität. Das ist kein Zufall; Typ N entstand als Weiterführung desselben Gedankens.
 
 ![Typ N (volle Kontaktstifte) und Schweizer Typ J (rot gestrichelt) übereinandergelegt: gleicher Abstand von 19 mm, anderer Stiftdurchmesser und andere Versetzung des Erdungsstifts](/images/2026-11-10_zasuvky-n-vs-j.svg)

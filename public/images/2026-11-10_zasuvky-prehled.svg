@@ -1,44 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1152 1900" font-family="sans-serif"><rect width="1152" height="1900" fill="#fff"/>
-<g transform="translate(0,0)"><rect x="114" y="102" width="156" height="84" rx="28" fill="#eee" stroke="#555" stroke-width="2"/><circle cx="135" cy="144" r="12" fill="#222" stroke="#222" stroke-width="1"/><circle cx="249" cy="144" r="12" fill="#222" stroke="#222" stroke-width="1"/>
-<text x="192" y="304" text-anchor="middle" font-size="22" font-weight="bold">C · Europlug</text>
-<text x="192" y="330" text-anchor="middle" font-size="16" fill="#444">Ø 4.0 · 19 mm</text></g>
-<g transform="translate(384,0)"><circle cx="192" cy="144" r="108" fill="#eee" stroke="#555" stroke-width="2"/><circle cx="135" cy="144" r="14.4" fill="#222" stroke="#222" stroke-width="1"/><circle cx="249" cy="144" r="14.4" fill="#222" stroke="#222" stroke-width="1"/><circle cx="192" cy="84" r="14.4" fill="#2a7" stroke="#222" stroke-width="1"/>
-<text x="192" y="304" text-anchor="middle" font-size="22" font-weight="bold">E · CZ SK FR BE PL</text>
-<text x="192" y="330" text-anchor="middle" font-size="16" fill="#444">Ø 4.8 · 19 mm · PE pin +10 mm</text></g>
-<g transform="translate(768,0)"><circle cx="192" cy="144" r="107.1" fill="#eee" stroke="#555" stroke-width="2"/><rect x="80.9" y="120" width="8" height="48" fill="#2a7" stroke="#222" stroke-width="1"/><rect x="295.1" y="120" width="8" height="48" fill="#2a7" stroke="#222" stroke-width="1"/><circle cx="135" cy="144" r="14.4" fill="#222" stroke="#222" stroke-width="1"/><circle cx="249" cy="144" r="14.4" fill="#222" stroke="#222" stroke-width="1"/>
-<text x="192" y="304" text-anchor="middle" font-size="22" font-weight="bold">F · Schuko</text>
-<text x="192" y="330" text-anchor="middle" font-size="16" fill="#444">Ø 4.8 · 19 mm · PE clips</text></g>
-<g transform="translate(0,328)"><circle cx="192" cy="144" r="108" fill="#eee" stroke="#555" stroke-width="2"/><circle cx="135" cy="144" r="14.4" fill="#222" stroke="#222" stroke-width="1"/><circle cx="249" cy="144" r="14.4" fill="#222" stroke="#222" stroke-width="1"/><circle cx="192" cy="222" r="14.4" fill="#2a7" stroke="#222" stroke-width="1"/>
-<text x="192" y="304" text-anchor="middle" font-size="22" font-weight="bold">K · DK</text>
-<text x="192" y="330" text-anchor="middle" font-size="16" fill="#444">Ø 4.8 · 19 mm · PE +13 mm</text></g>
-<g transform="translate(384,328)"><rect x="84" y="96" width="216" height="96" rx="32" fill="#eee" stroke="#555" stroke-width="2"/><circle cx="135" cy="144" r="12" fill="#222" stroke="#222" stroke-width="1"/><circle cx="192" cy="144" r="12" fill="#222" stroke="#222" stroke-width="1"/><circle cx="249" cy="144" r="12" fill="#222" stroke="#222" stroke-width="1"/>
-<text x="192" y="304" text-anchor="middle" font-size="22" font-weight="bold">L 10 A · IT</text>
-<text x="192" y="330" text-anchor="middle" font-size="16" fill="#444">Ø 4.0 · 19 mm</text></g>
-<g transform="translate(768,328)"><rect x="60" y="90" width="264" height="108" rx="36" fill="#eee" stroke="#555" stroke-width="2"/><circle cx="114" cy="144" r="15" fill="#222" stroke="#222" stroke-width="1"/><circle cx="192" cy="144" r="15" fill="#222" stroke="#222" stroke-width="1"/><circle cx="270" cy="144" r="15" fill="#222" stroke="#222" stroke-width="1"/>
-<text x="192" y="304" text-anchor="middle" font-size="22" font-weight="bold">L 16 A · IT</text>
-<text x="192" y="330" text-anchor="middle" font-size="16" fill="#444">Ø 5.0 · 26 mm</text></g>
-<g transform="translate(0,656)"><rect x="85.5" y="88.5" width="213" height="111" rx="37" fill="#eee" stroke="#555" stroke-width="2"/><circle cx="135" cy="129" r="12" fill="#222" stroke="#222" stroke-width="1"/><circle cx="249" cy="129" r="12" fill="#222" stroke="#222" stroke-width="1"/><circle cx="192" cy="159" r="12" fill="#2a7" stroke="#222" stroke-width="1"/>
-<text x="192" y="304" text-anchor="middle" font-size="22" font-weight="bold">J · CH · SN 441011</text>
-<text x="192" y="330" text-anchor="middle" font-size="16" fill="#444">Ø 4.0 · 19 mm · PE +5 mm · 10 A</text></g>
-<g transform="translate(384,656)"><polygon points="85.5,144.0 138.8,66.0 245.2,66.0 298.5,144.0 245.2,222.0 138.8,222.0" fill="#eee" stroke="#555" stroke-width="2" stroke-linejoin="round"/><circle cx="135" cy="135" r="13.5" fill="#222" stroke="#222" stroke-width="1"/><circle cx="249" cy="135" r="13.5" fill="#222" stroke="#222" stroke-width="1"/><circle cx="192" cy="153" r="13.5" fill="#2a7" stroke="#222" stroke-width="1"/>
-<text x="192" y="304" text-anchor="middle" font-size="22" font-weight="bold">N · IEC 60906-1</text>
-<text x="192" y="330" text-anchor="middle" font-size="16" fill="#444">Ø 4.5 · 19 mm · PE +3 mm · 16 A</text></g>
-<g transform="translate(768,656)"><polygon points="85.5,144.0 138.8,66.0 245.2,66.0 298.5,144.0 245.2,222.0 138.8,222.0" fill="#eee" stroke="#555" stroke-width="2" stroke-linejoin="round"/><circle cx="135" cy="135" r="12" fill="#fff" stroke="#222" stroke-width="2.5" stroke-dasharray="4 3"/><circle cx="249" cy="135" r="12" fill="#fff" stroke="#222" stroke-width="2.5" stroke-dasharray="4 3"/><circle cx="192" cy="153" r="12" fill="#fff" stroke="#222" stroke-width="2.5" stroke-dasharray="4 3"/>
-<text x="192" y="304" text-anchor="middle" font-size="22" font-weight="bold">N 10 A · BR · NBR 14136</text>
-<text x="192" y="330" text-anchor="middle" font-size="16" fill="#444">Ø 4.0 · dashed = unverified</text></g>
-<g transform="translate(0,984)"><polygon points="85.5,144.0 138.8,66.0 245.2,66.0 298.5,144.0 245.2,222.0 138.8,222.0" fill="#eee" stroke="#555" stroke-width="2" stroke-linejoin="round"/><circle cx="135" cy="135" r="14.4" fill="#fff" stroke="#222" stroke-width="2.5" stroke-dasharray="4 3"/><circle cx="249" cy="135" r="14.4" fill="#fff" stroke="#222" stroke-width="2.5" stroke-dasharray="4 3"/><circle cx="192" cy="153" r="14.4" fill="#fff" stroke="#222" stroke-width="2.5" stroke-dasharray="4 3"/>
-<text x="192" y="304" text-anchor="middle" font-size="22" font-weight="bold">N 20 A · BR · NBR 14136</text>
-<text x="192" y="330" text-anchor="middle" font-size="16" fill="#444">Ø 4.8 · dashed = unverified</text></g>
-<g transform="translate(384,984)"><rect x="102" y="90" width="180" height="108" rx="36" fill="#eee" stroke="#555" stroke-width="2"/><rect x="149.4" y="120.3" width="9.0" height="47.4" fill="#222" stroke="#222" stroke-width="1"/><rect x="225.6" y="124.8" width="9.0" height="38.4" fill="#222" stroke="#222" stroke-width="1"/>
-<text x="192" y="304" text-anchor="middle" font-size="22" font-weight="bold">A · US · NEMA 1-15</text>
-<text x="192" y="330" text-anchor="middle" font-size="16" fill="#444">6.4×1.5 · 12.7 mm · 15 A 125 V</text></g>
-<g transform="translate(768,984)"><rect x="96" y="84" width="192" height="168" rx="56" fill="#eee" stroke="#555" stroke-width="2"/><rect x="149.4" y="108.60000000000001" width="9.0" height="47.4" fill="#222" stroke="#222" stroke-width="1"/><rect x="225.6" y="113.10000000000001" width="9.0" height="38.4" fill="#222" stroke="#222" stroke-width="1"/><circle cx="192" cy="203.70000000000002" r="14.4" fill="#2a7" stroke="#222" stroke-width="1"/>
-<text x="192" y="352" text-anchor="middle" font-size="22" font-weight="bold">B · US · NEMA 5-15</text>
-<text x="192" y="378" text-anchor="middle" font-size="16" fill="#444">+ PE Ø 4.8 · +11.9 mm · 15 A 125 V</text></g>
-<g transform="translate(0,1360)"><rect x="60" y="54" width="264" height="312" rx="88" fill="#eee" stroke="#555" stroke-width="2"/><rect x="113.4" y="257.4" width="24" height="38.4" fill="#222" stroke="#222" stroke-width="1"/><rect x="246.6" y="257.4" width="24" height="38.4" fill="#222" stroke="#222" stroke-width="1"/><rect x="180" y="119.4" width="24" height="48" fill="#2a7" stroke="#222" stroke-width="1"/>
-<text x="192" y="436" text-anchor="middle" font-size="22" font-weight="bold">G · UK · BS 1363</text>
-<text x="192" y="462" text-anchor="middle" font-size="16" fill="#444">6.4×4.0 · 22.2 mm · 13 A</text></g>
-<g transform="translate(384,1360)"><circle cx="192" cy="234" r="174" fill="#eee" stroke="#555" stroke-width="2"/><circle cx="115.8" cy="319.8" r="21.3" fill="#222" stroke="#222" stroke-width="1"/><circle cx="268.2" cy="319.8" r="21.3" fill="#222" stroke="#222" stroke-width="1"/><circle cx="192" cy="148.2" r="26.1" fill="#2a7" stroke="#222" stroke-width="1"/>
-<text x="192" y="484" text-anchor="middle" font-size="22" font-weight="bold">M · BS 546 · SANS 164-1</text>
-<text x="192" y="510" text-anchor="middle" font-size="16" fill="#444">Ø 7.1 · 25.4 mm · PE Ø 8.7 · 15 A</text></g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1152 1968" font-family="sans-serif"><rect width="1152" height="1968" fill="#fff"/>
+<g transform="translate(0,0)"><polygon points="123.3,102.9 260.7,102.9 297.9,140.1 297.9,147.9 260.7,185.1 123.3,185.1 86.1,147.9 86.1,140.1" fill="#eee" stroke="#555" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="135.0" cy="144.0" r="12.0" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="249.0" cy="144.0" r="12.0" fill="#222" stroke="#222" stroke-width="1"/>
+<text x="192.0" y="314" text-anchor="middle" font-size="22" font-weight="bold">C · Europlug</text>
+<text x="192.0" y="338" text-anchor="middle" font-size="16" fill="#444">Ø 4.0 · 19 mm</text></g>
+<g transform="translate(384,0)"><circle cx="192.0" cy="144.0" r="108.0" fill="#eee" stroke="#555" stroke-width="2"/>
+<circle cx="135.0" cy="174.0" r="14.399999999999999" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="249.0" cy="174.0" r="14.399999999999999" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="192.0" cy="114.0" r="14.399999999999999" fill="#2a7" stroke="#222" stroke-width="1"/>
+<text x="192.0" y="314" text-anchor="middle" font-size="22" font-weight="bold">E · CZ SK FR BE PL</text>
+<text x="192.0" y="338" text-anchor="middle" font-size="16" fill="#444">Ø 4.8 · 19 mm · PE pin +10 mm</text></g>
+<g transform="translate(768,0)"><path d="M 99.0 90.9 A 107.1 107.1 0 0 1 285.0 90.9 L 285.0 197.1 A 107.1 107.1 0 0 1 99.0 197.1 Z" fill="#eee" stroke="#555" stroke-width="2" stroke-linejoin="round"/>
+<rect x="103.2" y="120.0" width="6" height="48" rx="3" fill="#bbb" stroke="#555" stroke-width="1"/>
+<rect x="274.8" y="120.0" width="6" height="48" rx="3" fill="#bbb" stroke="#555" stroke-width="1"/>
+<rect x="168.0" y="32.9" width="48" height="8" fill="#2a7"/>
+<rect x="168.0" y="247.1" width="48" height="8" fill="#2a7"/>
+<circle cx="135.0" cy="144.0" r="14.399999999999999" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="249.0" cy="144.0" r="14.399999999999999" fill="#222" stroke="#222" stroke-width="1"/>
+<text x="192.0" y="314" text-anchor="middle" font-size="22" font-weight="bold">F · Schuko</text>
+<text x="192.0" y="338" text-anchor="middle" font-size="16" fill="#444">Ø 4.8 · 19 mm · PE clips</text></g>
+<g transform="translate(0,348)"><circle cx="192.0" cy="144.0" r="108.0" fill="#eee" stroke="#555" stroke-width="2"/>
+<circle cx="135.0" cy="105.0" r="14.399999999999999" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="249.0" cy="105.0" r="14.399999999999999" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="192.0" cy="183.0" r="14.399999999999999" fill="#2a7" stroke="#222" stroke-width="1"/>
+<text x="192.0" y="314" text-anchor="middle" font-size="22" font-weight="bold">K · DK</text>
+<text x="192.0" y="338" text-anchor="middle" font-size="16" fill="#444">Ø 4.8 · 19 mm · PE 13 mm</text></g>
+<g transform="translate(384,348)"><rect x="84.0" y="96.0" width="216" height="96" rx="32.0" fill="#eee" stroke="#555" stroke-width="2"/>
+<circle cx="135.0" cy="144.0" r="12.0" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="192.0" cy="144.0" r="12.0" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="249.0" cy="144.0" r="12.0" fill="#222" stroke="#222" stroke-width="1"/>
+<text x="192.0" y="314" text-anchor="middle" font-size="22" font-weight="bold">L 10 A · IT</text>
+<text x="192.0" y="338" text-anchor="middle" font-size="16" fill="#444">Ø 4.0 · 19 mm</text></g>
+<g transform="translate(768,348)"><rect x="60.0" y="90.0" width="264" height="108" rx="36.0" fill="#eee" stroke="#555" stroke-width="2"/>
+<circle cx="114.0" cy="144.0" r="15.0" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="192.0" cy="144.0" r="15.0" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="270.0" cy="144.0" r="15.0" fill="#222" stroke="#222" stroke-width="1"/>
+<text x="192.0" y="314" text-anchor="middle" font-size="22" font-weight="bold">L 16 A · IT</text>
+<text x="192.0" y="338" text-anchor="middle" font-size="16" fill="#444">Ø 5.0 · 26 mm</text></g>
+<g transform="translate(0,696)"><polygon points="143.1,84.0 240.9,84.0 297.0,140.1 297.0,147.9 240.9,204.0 143.1,204.0 87.0,147.9 87.0,140.1" fill="#eee" stroke="#555" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="135.0" cy="144.0" r="12.0" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="249.0" cy="144.0" r="12.0" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="192.0" cy="174.0" r="12.0" fill="#2a7" stroke="#222" stroke-width="1"/>
+<text x="192.0" y="314" text-anchor="middle" font-size="22" font-weight="bold">J · CH · SN 441011</text>
+<text x="192.0" y="338" text-anchor="middle" font-size="16" fill="#444">Ø 4.0 · 19 mm · PE +5 mm · 10 A</text></g>
+<g transform="translate(384,696)"><polygon points="132.6,93.0 251.4,93.0 298.5,140.1 298.5,147.9 251.4,195.0 132.6,195.0 85.5,147.9 85.5,140.1" fill="#eee" stroke="#555" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="135.0" cy="144.0" r="13.5" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="249.0" cy="144.0" r="13.5" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="192.0" cy="162.0" r="13.5" fill="#2a7" stroke="#222" stroke-width="1"/>
+<text x="192.0" y="314" text-anchor="middle" font-size="22" font-weight="bold">N · IEC 60906-1</text>
+<text x="192.0" y="338" text-anchor="middle" font-size="16" fill="#444">Ø 4.5 · 19 mm · PE +3 mm · 16 A</text></g>
+<g transform="translate(768,696)"><polygon points="134.7,91.2 249.3,91.2 298.2,140.1 298.2,147.9 249.3,196.8 134.7,196.8 85.8,147.9 85.8,140.1" fill="#eee" stroke="#555" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="135.0" cy="144.0" r="12.0" fill="#fff" stroke="#222" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="249.0" cy="144.0" r="12.0" fill="#fff" stroke="#222" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="192.0" cy="162.0" r="12.0" fill="#fff" stroke="#222" stroke-width="2.5" stroke-dasharray="4 3"/>
+<text x="192.0" y="314" text-anchor="middle" font-size="22" font-weight="bold">N 10 A · BR · NBR 14136</text>
+<text x="192.0" y="338" text-anchor="middle" font-size="16" fill="#444">Ø 4.0 · dashed = unverified</text></g>
+<g transform="translate(0,1044)"><polygon points="134.7,91.2 249.3,91.2 298.2,140.1 298.2,147.9 249.3,196.8 134.7,196.8 85.8,147.9 85.8,140.1" fill="#eee" stroke="#555" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="135.0" cy="144.0" r="14.399999999999999" fill="#fff" stroke="#222" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="249.0" cy="144.0" r="14.399999999999999" fill="#fff" stroke="#222" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="192.0" cy="162.0" r="14.399999999999999" fill="#fff" stroke="#222" stroke-width="2.5" stroke-dasharray="4 3"/>
+<text x="192.0" y="314" text-anchor="middle" font-size="22" font-weight="bold">N 20 A · BR · NBR 14136</text>
+<text x="192.0" y="338" text-anchor="middle" font-size="16" fill="#444">Ø 4.8 · dashed = unverified</text></g>
+<g transform="translate(384,1044)"><rect x="102.0" y="90.0" width="180" height="108" rx="36.0" fill="#eee" stroke="#555" stroke-width="2"/>
+<rect x="149.4" y="120.3" width="9.0" height="47.400000000000006" fill="#222" stroke="#222" stroke-width="1"/>
+<rect x="225.6" y="124.8" width="9.0" height="38.400000000000006" fill="#222" stroke="#222" stroke-width="1"/>
+<text x="192.0" y="314" text-anchor="middle" font-size="22" font-weight="bold">A · US · NEMA 1-15</text>
+<text x="192.0" y="338" text-anchor="middle" font-size="16" fill="#444">6.4×1.5 · 12.7 mm · 15 A 125 V</text></g>
+<g transform="translate(768,1044)"><rect x="96.0" y="84.0" width="192" height="168" rx="56.0" fill="#eee" stroke="#555" stroke-width="2"/>
+<rect x="149.4" y="108.60000000000001" width="9.0" height="47.400000000000006" fill="#222" stroke="#222" stroke-width="1"/>
+<rect x="225.6" y="113.10000000000001" width="9.0" height="38.400000000000006" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="192.0" cy="203.70000000000002" r="14.399999999999999" fill="#2a7" stroke="#222" stroke-width="1"/>
+<text x="192.0" y="362" text-anchor="middle" font-size="22" font-weight="bold">B · US · NEMA 5-15</text>
+<text x="192.0" y="386" text-anchor="middle" font-size="16" fill="#444">+ PE Ø 4.8 · +11.9 mm · 15 A 125 V</text></g>
+<g transform="translate(0,1440)"><rect x="60.0" y="54.00000000000003" width="264" height="312" rx="88.0" fill="#eee" stroke="#555" stroke-width="2"/>
+<rect x="113.4" y="257.40000000000003" width="24.0" height="38.400000000000006" fill="#222" stroke="#222" stroke-width="1"/>
+<rect x="246.60000000000002" y="257.40000000000003" width="24.0" height="38.400000000000006" fill="#222" stroke="#222" stroke-width="1"/>
+<rect x="180.0" y="119.40000000000003" width="24.0" height="48.0" fill="#2a7" stroke="#222" stroke-width="1"/>
+<text x="192.0" y="446" text-anchor="middle" font-size="22" font-weight="bold">G · UK · BS 1363</text>
+<text x="192.0" y="470" text-anchor="middle" font-size="16" fill="#444">6.4×4.0 · 22.2 mm · 13 A</text></g>
+<g transform="translate(384,1440)"><circle cx="192.0" cy="234.0" r="174.0" fill="#eee" stroke="#555" stroke-width="2"/>
+<circle cx="115.80000000000001" cy="319.8" r="21.299999999999997" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="268.2" cy="319.8" r="21.299999999999997" fill="#222" stroke="#222" stroke-width="1"/>
+<circle cx="192.0" cy="148.2" r="26.099999999999998" fill="#2a7" stroke="#222" stroke-width="1"/>
+<text x="192.0" y="494" text-anchor="middle" font-size="22" font-weight="bold">M · BS 546 · SANS 164-1</text>
+<text x="192.0" y="518" text-anchor="middle" font-size="16" fill="#444">Ø 7.1 · 25.4 mm · PE Ø 8.7 · 15 A</text></g>
 </svg>

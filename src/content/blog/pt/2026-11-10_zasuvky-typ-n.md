@@ -21,6 +21,10 @@ A norma **IEC 60.906-1** (primeira edição de 1986, a atual de 2009) descreve
 
 É também uma tomada pequena. A ficha do tipo N ocupa cerca de 4,6 cm², enquanto a Schuko ocupa cerca de 10 cm². Dizem que duas tomadas N cabem no lugar de uma Schuko ou de uma BS 1363 britânica.
 
+Vê-se melhor na face da ficha: o Europlug, o tipo N, a sua variante brasileira e o tipo J suíço têm praticamente o mesmo hexágono plano, com cerca de 35 mm de largura, e diferem apenas na altura (13,7 a 20 mm).
+
+![Faces das fichas Europlug, tipo N, variante brasileira e tipo J suíço à mesma escala: o mesmo hexágono plano, que só difere na altura](/images/2026-11-10_zasuvky-tvary.svg)
+
 O tipo N é muito semelhante ao tipo J suíço, usado na Suíça desde os anos cinquenta. A diferença está nos pormenores: o J tem pinos de Ø 4,0 mm, o terra deslocado 5 mm e polaridade inversa. Não é por acaso; o tipo N nasceu como o aperfeiçoamento da mesma ideia.
 
 ![Tipo N (pinos cheios) e tipo J suíço (a tracejado vermelho) sobrepostos: o mesmo afastamento de 19 mm, mas diâmetro dos pinos e deslocamento do pino de terra diferentes](/images/2026-11-10_zasuvky-n-vs-j.svg)

@@ -21,6 +21,10 @@ The standard **IEC 60,906–1** (first edition 1986, current one from 2009) des
 
 It is also a small socket. A type N plug has an area of about 4.6 cm², whereas Schuko has about 10 cm². Two N sockets are said to fit in the space of one Schuko or British BS 1363.
 
+It is easiest to see on the face of the plug: the Europlug, type N, its Brazilian variant and the Swiss type J all have practically the same flat hexagon, about 35 mm wide, and differ only in height (13.7 to 20 mm).
+
+![Faces of the Europlug, type N, the Brazilian variant and the Swiss type J plugs at the same scale: the same flat hexagon, differing only in height](/images/2026-11-10_zasuvky-tvary.svg)
+
 Type N is very similar to the Swiss type J, which has been used in Switzerland since the 1950 s. The difference is in the details: J has pins of Ø 4.0 mm, the earth offset by 5 mm and the opposite polarity. That is no coincidence; type N came about as a refinement of the same idea.
 
 ![Type N (solid pins) and Swiss type J (red, dashed) overlaid: the same 19 mm spacing, a different pin diameter and earth pin offset](/images/2026-11-10_zasuvky-n-vs-j.svg)

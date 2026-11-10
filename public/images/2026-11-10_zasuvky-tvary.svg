@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 528 412" font-family="sans-serif"><rect width="528" height="412" fill="#fff"/>
+<polygon points="63.3,36.9 200.7,36.9 237.9,74.1 237.9,81.9 200.7,119.1 63.3,119.1 26.1,81.9 26.1,74.1" fill="#eee" stroke="#555" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="75.0" cy="78" r="12.0" fill="#222"/>
+<circle cx="189.0" cy="78" r="12.0" fill="#222"/>
+<text x="132.0" y="141.1" text-anchor="middle" font-size="14" font-weight="bold">C · Europlug</text>
+<text x="132.0" y="157.1" text-anchor="middle" font-size="10" fill="#444">35.3 × 13.7 mm · Ø 4.0 · 2.5 A</text>
+<polygon points="336.6,27.0 455.4,27.0 502.5,74.1 502.5,81.9 455.4,129.0 336.6,129.0 289.5,81.9 289.5,74.1" fill="#eee" stroke="#555" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="339.0" cy="78" r="13.5" fill="#222"/>
+<circle cx="453.0" cy="78" r="13.5" fill="#222"/>
+<circle cx="396.0" cy="96" r="13.5" fill="#2a7"/>
+<text x="396.0" y="151.0" text-anchor="middle" font-size="14" font-weight="bold">N · IEC 60906-1</text>
+<text x="396.0" y="167.0" text-anchor="middle" font-size="10" fill="#444">35.5 × 17 mm · Ø 4.5 · 16 A</text>
+<polygon points="74.7,231.2 189.3,231.2 238.2,280.1 238.2,287.9 189.3,336.8 74.7,336.8 25.8,287.9 25.8,280.1" fill="#eee" stroke="#555" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="75.0" cy="284" r="12.0" fill="#222"/>
+<circle cx="189.0" cy="284" r="12.0" fill="#222"/>
+<circle cx="132.0" cy="302" r="12.0" fill="#2a7"/>
+<text x="132.0" y="358.8" text-anchor="middle" font-size="14" font-weight="bold">N · BR · NBR 14136</text>
+<text x="132.0" y="374.8" text-anchor="middle" font-size="10" fill="#444">35.4 × 17.6 mm · Ø 4.0 · 10 A</text>
+<polygon points="347.1,224.0 444.9,224.0 501.0,280.1 501.0,287.9 444.9,344.0 347.1,344.0 291.0,287.9 291.0,280.1" fill="#eee" stroke="#555" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="339.0" cy="284" r="12.0" fill="#222"/>
+<circle cx="453.0" cy="284" r="12.0" fill="#222"/>
+<circle cx="396.0" cy="314" r="12.0" fill="#2a7"/>
+<text x="396.0" y="366.0" text-anchor="middle" font-size="14" font-weight="bold">J · CH · SN 441011</text>
+<text x="396.0" y="382.0" text-anchor="middle" font-size="10" fill="#444">35.0 × 20 mm · Ø 4.0 · 10 A</text>
+</svg>

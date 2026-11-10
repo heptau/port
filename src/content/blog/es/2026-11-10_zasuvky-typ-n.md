@@ -21,6 +21,10 @@ La norma **IEC 60.906–1** (primera edición de 1986, la vigente de 2009) descr
 
 Es además una toma pequeña. La clavija de tipo N tiene una superficie de unos 4,6 cm², mientras que la Schuko tiene unos 10 cm². Al parecer, dos tomas N caben en el espacio de una Schuko o de una británica BS 1363.
 
+Se ve mejor en la cara de la clavija: el Europlug, el tipo N, su variante brasileña y el tipo J suizo tienen prácticamente el mismo hexágono plano, de unos 35 mm de ancho, y solo se diferencian en la altura (de 13,7 a 20 mm).
+
+![Caras de las clavijas Europlug, tipo N, variante brasileña y tipo J suizo a la misma escala: el mismo hexágono plano, que solo difiere en la altura](/images/2026-11-10_zasuvky-tvary.svg)
+
 El tipo N es muy parecido al tipo J suizo, que se usa en Suiza desde los años cincuenta. La diferencia está en los detalles: la J tiene patillas de Ø 4,0 mm, la tierra desplazada 5 mm y la polaridad opuesta. No es casualidad; el tipo N nació como la culminación de la misma idea.
 
 ![Tipo N (patillas macizas) y tipo J suizo (en rojo, discontinuo) superpuestos: la misma separación de 19 mm, distinto diámetro de patillas y distinto desplazamiento de la patilla de tierra](/images/2026-11-10_zasuvky-n-vs-j.svg)
