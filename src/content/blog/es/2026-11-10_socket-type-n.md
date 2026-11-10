@@ -11,7 +11,7 @@ translation_id: "2026-11-10_1"
 
 La tensión en la toma de corriente es la misma en toda Europa desde el cambio de milenio: 230 V, 50 Hz. Pero en cuanto cruzas una frontera, a menudo necesitas un adaptador. La Unión sabe unificar los cargadores de móvil, pero las tomas de corriente a las que se enchufan esos cargadores se quedaron como las inventó cada Estado por separado hace cien años.
 
-![Resumen de las tomas de corriente y clavijas usadas en Europa y en el mundo, con las patillas a la misma escala; tipos por orden alfabético, con códigos de países de uso](/images/2026-11-10_zasuvky-prehled.svg)
+![Resumen de las tomas de corriente y clavijas usadas en Europa y en el mundo, con las patillas a la misma escala; tipos por orden alfabético, con códigos de países de uso](/images/2026-11-10_socket-overview.svg)
 
 Intenté averiguar por qué. Y descubrí dos cosas. Primero, existe una norma internacional diseñada precisamente como toma común para las regiones con 230 V. Segundo: Europa ya ha considerado seriamente en varias ocasiones unificar las tomas de corriente, y cada vez fracasó por una sola razón: **el coste de obligar a sustituirlas**. Hoy creo que existe un camino que no necesita sustituir nada.
 
@@ -23,11 +23,11 @@ Es además una toma pequeña. La clavija de tipo N tiene una superficie de unos 
 
 Se ve mejor en la cara de la clavija: el Europlug, el tipo N, su variante brasileña y el tipo J suizo tienen prácticamente el mismo hexágono plano, de unos 35 mm de ancho, y solo se diferencian en la altura (de 13,7 a 20 mm).
 
-![Caras de las clavijas Europlug, tipo N, variante brasileña y tipo J suizo a la misma escala: el mismo hexágono plano, que solo difiere en la altura](/images/2026-11-10_zasuvky-tvary.svg)
+![Caras de las clavijas Europlug, tipo N, variante brasileña y tipo J suizo a la misma escala: el mismo hexágono plano, que solo difiere en la altura](/images/2026-11-10_socket-shapes.svg)
 
 El tipo N es muy parecido al tipo J suizo, que se usa en Suiza desde los años cincuenta. La diferencia está en los detalles: la J tiene patillas de Ø 4,0 mm, la tierra desplazada 5 mm y la polaridad opuesta. No es casualidad; el tipo N nació como la culminación de la misma idea.
 
-![Tipo N (patillas macizas) y tipo J suizo (en rojo, discontinuo) superpuestos: la misma separación de 19 mm, distinto diámetro de patillas y distinto desplazamiento de la patilla de tierra](/images/2026-11-10_zasuvky-n-vs-j.svg)
+![Tipo N (patillas macizas) y tipo J suizo (en rojo, discontinuo) superpuestos: la misma separación de 19 mm, distinto diámetro de patillas y distinto desplazamiento de la patilla de tierra](/images/2026-11-10_socket-n-vs-j.svg)
 
 También importa la compatibilidad con lo anterior. Según las fuentes disponibles, el **Europlug** de dos patillas (Ø 4,0 mm, separación de 19 mm) encaja en la toma N: en Sudáfrica, donde el tipo N está implantado, se indica que la toma local acepta el Europlug y que incluso está contemplado de forma expresa (norma SANS 164–5 para el Europlug y SANS 164–2 para la toma). La separación de 19 mm es la misma que en la mayoría de las tomas europeas. No logré averiguar por qué exactamente los autores de la norma lo diseñaron así; pero es justo la propiedad que facilitaría la transición en Europa, porque cargadores, routers y muchos otros aparatos encajarían en la nueva toma sin cambios.
 

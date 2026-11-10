@@ -11,7 +11,7 @@ translation_id: "2026-11-10_1"
 
 A tensão na tomada é a mesma em toda a Europa desde a viragem do milénio: 230 V, 50 Hz. Só que, mal se passa a fronteira, muitas vezes é preciso um adaptador. A União sabe uniformizar os carregadores de telemóvel, mas as tomadas onde esses carregadores se ligam ficaram como cada Estado as inventou, há cem anos, cada um por si.
 
-![Panorama das tomadas e fichas usadas na Europa e no mundo, com os pinos à mesma escala; tipos por ordem alfabética, com códigos dos países de uso](/images/2026-11-10_zasuvky-prehled.svg)
+![Panorama das tomadas e fichas usadas na Europa e no mundo, com os pinos à mesma escala; tipos por ordem alfabética, com códigos dos países de uso](/images/2026-11-10_socket-overview.svg)
 
 Tentei perceber porquê. E descobri duas coisas. Primeiro, existe uma norma internacional concebida precisamente como tomada comum para as regiões com 230 V. Segundo: a Europa já ponderou seriamente, várias vezes, uniformizar as tomadas, e de cada vez a ideia naufragou por uma única razão, **o custo da substituição forçada**. Hoje penso que existe um caminho que não precisa de substituição nenhuma.
 
@@ -23,11 +23,11 @@ A norma **IEC 60.906-1** (primeira edição de 1986, a atual de 2009) descreve
 
 Vê-se melhor na face da ficha: o Europlug, o tipo N, a sua variante brasileira e o tipo J suíço têm praticamente o mesmo hexágono plano, com cerca de 35 mm de largura, e diferem apenas na altura (13,7 a 20 mm).
 
-![Faces das fichas Europlug, tipo N, variante brasileira e tipo J suíço à mesma escala: o mesmo hexágono plano, que só difere na altura](/images/2026-11-10_zasuvky-tvary.svg)
+![Faces das fichas Europlug, tipo N, variante brasileira e tipo J suíço à mesma escala: o mesmo hexágono plano, que só difere na altura](/images/2026-11-10_socket-shapes.svg)
 
 O tipo N é muito semelhante ao tipo J suíço, usado na Suíça desde os anos cinquenta. A diferença está nos pormenores: o J tem pinos de Ø 4,0 mm, o terra deslocado 5 mm e polaridade inversa. Não é por acaso; o tipo N nasceu como o aperfeiçoamento da mesma ideia.
 
-![Tipo N (pinos cheios) e tipo J suíço (a tracejado vermelho) sobrepostos: o mesmo afastamento de 19 mm, mas diâmetro dos pinos e deslocamento do pino de terra diferentes](/images/2026-11-10_zasuvky-n-vs-j.svg)
+![Tipo N (pinos cheios) e tipo J suíço (a tracejado vermelho) sobrepostos: o mesmo afastamento de 19 mm, mas diâmetro dos pinos e deslocamento do pino de terra diferentes](/images/2026-11-10_socket-n-vs-j.svg)
 
 Importante é também a compatibilidade com o que já existe. A **Europlug** de dois pinos (Ø 4,0 mm, afastamento de 19 mm) encaixa, segundo as fontes disponíveis, na tomada N: na África do Sul, onde o tipo N está implantado, diz-se que a tomada local aceita a Europlug e que isso está até expressamente previsto (a norma SANS 164-5 para a Europlug e a SANS 164-2 para a tomada). O afastamento de 19 mm é o mesmo da maioria das tomadas europeias. Não consegui apurar por que razão exatamente os autores da norma o propuseram assim; mas é justamente a característica que facilitaria a transição na Europa, porque carregadores, routers e muitos outros aparelhos encaixariam na nova tomada sem qualquer alteração.
 

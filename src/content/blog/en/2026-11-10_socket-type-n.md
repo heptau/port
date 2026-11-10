@@ -11,7 +11,7 @@ translation_id: "2026-11-10_1"
 
 Since the turn of the millennium, the voltage at the wall has been the same across Europe: 230 V, 50 Hz. Yet as soon as you cross a border, you often need an adapter. The Union can unify mobile phone chargers, but the sockets those chargers plug into stayed the way each country invented them separately a hundred years ago.
 
-![Overview of sockets and plugs used in Europe and around the world, pins at the same scale; types in alphabetical order, with country codes](/images/2026-11-10_zasuvky-prehled.svg)
+![Overview of sockets and plugs used in Europe and around the world, pins at the same scale; types in alphabetical order, with country codes](/images/2026-11-10_socket-overview.svg)
 
 I tried to find out why. And I found two things. First, there is an international standard that was designed precisely as a common socket for regions with 230 V. Second: Europe has seriously considered unifying sockets several times, and each time it foundered on a single thing — **the cost of forced replacement**. Today I think there is a path that needs no replacement at all.
 
@@ -23,11 +23,11 @@ It is also a small socket. A type N plug has an area of about 4.6 cm², wher
 
 It is easiest to see on the face of the plug: the Europlug, type N, its Brazilian variant and the Swiss type J all have practically the same flat hexagon, about 35 mm wide, and differ only in height (13.7 to 20 mm).
 
-![Faces of the Europlug, type N, the Brazilian variant and the Swiss type J plugs at the same scale: the same flat hexagon, differing only in height](/images/2026-11-10_zasuvky-tvary.svg)
+![Faces of the Europlug, type N, the Brazilian variant and the Swiss type J plugs at the same scale: the same flat hexagon, differing only in height](/images/2026-11-10_socket-shapes.svg)
 
 Type N is very similar to the Swiss type J, which has been used in Switzerland since the 1950 s. The difference is in the details: J has pins of Ø 4.0 mm, the earth offset by 5 mm and the opposite polarity. That is no coincidence; type N came about as a refinement of the same idea.
 
-![Type N (solid pins) and Swiss type J (red, dashed) overlaid: the same 19 mm spacing, a different pin diameter and earth pin offset](/images/2026-11-10_zasuvky-n-vs-j.svg)
+![Type N (solid pins) and Swiss type J (red, dashed) overlaid: the same 19 mm spacing, a different pin diameter and earth pin offset](/images/2026-11-10_socket-n-vs-j.svg)
 
 Backward compatibility matters too. According to available sources, the two-pin **Europlug** (Ø 4.0 mm, 19 mm spacing) fits into an N socket: in South Africa, where type N is established, it is reported that the local socket accepts the Europlug and that this is even explicitly intended (standard SANS 164–5 for the Europlug and SANS 164–2 for the socket). The 19 mm spacing is the same as in most European sockets. I couldn’t find out exactly why the authors of the standard designed it this way; but it is exactly the property that would make a transition easier in Europe, because chargers, routers and many other devices would fit into the new socket unchanged.
 

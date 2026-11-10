@@ -12,6 +12,13 @@ export default defineConfig({
     },
   },
   trailingSlash: 'never',
+  redirects: {
+    '/2026-11-10_zasuvky-typ-n': '/2026-11-10_socket-type-n',
+    '/cs/2026-11-10_zasuvky-typ-n': '/cs/2026-11-10_socket-type-n',
+    '/de/2026-11-10_zasuvky-typ-n': '/de/2026-11-10_socket-type-n',
+    '/es/2026-11-10_zasuvky-typ-n': '/es/2026-11-10_socket-type-n',
+    '/pt/2026-11-10_zasuvky-typ-n': '/pt/2026-11-10_socket-type-n',
+  },
   integrations: [sitemap()],
   devToolbar: { enabled: false },
   markdown: {

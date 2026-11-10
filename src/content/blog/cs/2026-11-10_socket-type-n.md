@@ -11,7 +11,7 @@ translation_id: "2026-11-10_1"
 
 Napětí v zásuvce máme v celé Evropě od přelomu tisíciletí stejné: 230 V, 50 Hz. Jenže jakmile přejedete hranici, často potřebujete adaptér. Unie umí sjednotit nabíječky mobilů, ale zásuvky, do kterých se ty nabíječky zapojují, zůstaly tak, jak je před sto lety vymyslel každý stát zvlášť.
 
-![Přehled zásuvek a zástrček používaných v Evropě i ve světě, kolíky ve stejném měřítku; typy seřazené podle písmen, s kódy zemí použití](/images/2026-11-10_zasuvky-prehled.svg)
+![Přehled zásuvek a zástrček používaných v Evropě i ve světě, kolíky ve stejném měřítku; typy seřazené podle písmen, s kódy zemí použití](/images/2026-11-10_socket-overview.svg)
 
 Zkusil jsem zjistit, proč. A zjistil jsem dvě věci. Za prvé existuje mezinárodní norma, která byla navržena právě jako společná zásuvka pro oblasti s 230 V. Za druhé: Evropa o sjednocení zásuvek už několikrát vážně uvažovala a pokaždé to ztroskotalo na jediné věci — **na ceně nucené výměny**. Dnes si myslím, že existuje cesta, která žádnou výměnu nepotřebuje.
 
@@ -23,11 +23,11 @@ Je to zároveň malá zásuvka. Zástrčka typu N má plochu asi 4,6 cm², zatí
 
 Nejlépe je to vidět na čele zástrčky: Europlug, typ N, jeho brazilská varianta i švýcarský typ J mají prakticky stejný plochý šestiúhelník o šířce asi 35 mm a liší se jen výškou (13,7 až 20 mm).
 
-![Čela zástrček Europlug, typu N, brazilské varianty a švýcarského typu J ve stejném měřítku: stejný plochý šestiúhelník, liší se jen výškou](/images/2026-11-10_zasuvky-tvary.svg)
+![Čela zástrček Europlug, typu N, brazilské varianty a švýcarského typu J ve stejném měřítku: stejný plochý šestiúhelník, liší se jen výškou](/images/2026-11-10_socket-shapes.svg)
 
 Typ N je velmi podobný švýcarskému typu J, který se ve Švýcarsku používá od padesátých let. Rozdíl je v detailech: J má kolíky Ø 4,0 mm, zem odsazenou o 5 mm a opačnou polaritu. Není to náhoda; typ N vznikl jako dotažení stejné myšlenky.
 
-![Typ N (plné kolíky) a švýcarský typ J (červeně čárkovaně) přes sebe: stejná rozteč 19 mm, jiný průměr kolíků a odsazení zemního kolíku](/images/2026-11-10_zasuvky-n-vs-j.svg)
+![Typ N (plné kolíky) a švýcarský typ J (červeně čárkovaně) přes sebe: stejná rozteč 19 mm, jiný průměr kolíků a odsazení zemního kolíku](/images/2026-11-10_socket-n-vs-j.svg)
 
 Důležitá je i zpětná kompatibilita. Dvoukolíkový **Europlug** (Ø 4,0 mm, rozteč 19 mm) do zásuvky N podle dostupných zdrojů zapadne: v Jižní Africe, kde je typ N zavedený, se uvádí, že tamní zásuvka Europlug přijímá a že je to dokonce výslovně počítáno (norma SANS 164–5 pro Europlug a SANS 164–2 pro zásuvku). Rozteč 19 mm je stejná jako u většiny evropských zásuvek. Proč přesně to tvůrci normy navrhli, se mi dohledat nepodařilo; je to ale přesně ta vlastnost, která by v Evropě přechod usnadnila, protože nabíječky, routery a spousta dalších zařízení by do nové zásuvky zapadla beze změny.
 

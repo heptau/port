@@ -11,7 +11,7 @@ translation_id: "2026-11-10_1"
 
 Die Spannung in der Steckdose ist in ganz Europa seit der Jahrtausendwende gleich: 230 V, 50 Hz. Sobald Sie aber eine Grenze überqueren, brauchen Sie oft einen Adapter. Die Union schafft es, die Ladegeräte für Mobiltelefone zu vereinheitlichen, aber die Steckdosen, in die diese Ladegeräte gesteckt werden, sind so geblieben, wie sie vor hundert Jahren jeder Staat für sich erdacht hat.
 
-![Übersicht der in Europa und weltweit verwendeten Steckdosen und Stecker, Kontaktstifte im gleichen Maßstab; Typen alphabetisch mit Ländercodes](/images/2026-11-10_zasuvky-prehled.svg)
+![Übersicht der in Europa und weltweit verwendeten Steckdosen und Stecker, Kontaktstifte im gleichen Maßstab; Typen alphabetisch mit Ländercodes](/images/2026-11-10_socket-overview.svg)
 
 Ich habe versucht herauszufinden, warum. Dabei habe ich zwei Dinge festgestellt. Erstens gibt es eine internationale Norm, die genau als gemeinsame Steckdose für Gebiete mit 230 V entworfen wurde. Zweitens: Europa hat die Vereinheitlichung der Steckdosen schon mehrmals ernsthaft erwogen, und jedes Mal ist sie an einer einzigen Sache gescheitert — **an den Kosten des erzwungenen Austauschs**. Heute glaube ich, dass es einen Weg gibt, der gar keinen Austausch braucht.
 
@@ -23,11 +23,11 @@ Es ist zugleich eine kleine Steckdose. Der Stecker vom Typ N hat eine Fläche v
 
 Am besten sieht man das an der Stirnseite des Steckers: Europlug, Typ N, seine brasilianische Variante und der Schweizer Typ J haben praktisch dasselbe flache Sechseck von etwa 35 mm Breite und unterscheiden sich nur in der Höhe (13,7 bis 20 mm).
 
-![Stirnseiten der Stecker Europlug, Typ N, brasilianische Variante und Schweizer Typ J im gleichen Maßstab: dasselbe flache Sechseck, nur die Höhe unterscheidet sich](/images/2026-11-10_zasuvky-tvary.svg)
+![Stirnseiten der Stecker Europlug, Typ N, brasilianische Variante und Schweizer Typ J im gleichen Maßstab: dasselbe flache Sechseck, nur die Höhe unterscheidet sich](/images/2026-11-10_socket-shapes.svg)
 
 Typ N ist dem Schweizer Typ J sehr ähnlich, der in der Schweiz seit den fünfziger Jahren verwendet wird. Der Unterschied liegt in den Details: J hat Kontaktstifte mit Ø 4,0 mm, die Erdung um 5 mm versetzt und die entgegengesetzte Polarität. Das ist kein Zufall; Typ N entstand als Weiterführung desselben Gedankens.
 
-![Typ N (volle Kontaktstifte) und Schweizer Typ J (rot gestrichelt) übereinandergelegt: gleicher Abstand von 19 mm, anderer Stiftdurchmesser und andere Versetzung des Erdungsstifts](/images/2026-11-10_zasuvky-n-vs-j.svg)
+![Typ N (volle Kontaktstifte) und Schweizer Typ J (rot gestrichelt) übereinandergelegt: gleicher Abstand von 19 mm, anderer Stiftdurchmesser und andere Versetzung des Erdungsstifts](/images/2026-11-10_socket-n-vs-j.svg)
 
 Wichtig ist auch die Abwärtskompatibilität. Der zweipolige **Europlug** (Ø 4,0 mm, Abstand 19 mm) passt laut verfügbaren Quellen in eine N-Steckdose: Für Südafrika, wo Typ N etabliert ist, wird angegeben, dass die dortige Steckdose den Europlug aufnimmt und dass dies sogar ausdrücklich so vorgesehen ist (Norm SANS 164–5 für den Europlug und SANS 164–2 für die Steckdose). Der Abstand von 19 mm ist derselbe wie bei den meisten europäischen Steckdosen. Warum die Autoren der Norm das genau so entworfen haben, konnte ich nicht herausfinden; es ist aber genau die Eigenschaft, die in Europa den Übergang erleichtern würde, denn Ladegeräte, Router und eine Menge weiterer Geräte würden ohne Änderung in die neue Steckdose passen.
 
